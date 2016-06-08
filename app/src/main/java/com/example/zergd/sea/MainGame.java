@@ -6,6 +6,9 @@ import android.widget.*;
 
 public class MainGame extends AppCompatActivity {
 
+	public Astronaut astro = new Astronaut("Chris");
+	public MainBase base = new MainBase("Alpha",astro);
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
