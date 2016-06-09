@@ -1,6 +1,6 @@
-package Actions;
+package com.example.zergd.sea.Actions;
 
-import Astronaut.Astronaut;
+import com.example.zergd.sea.Astronaut.Astronaut;
 
 public class ActionWait extends Action {
 

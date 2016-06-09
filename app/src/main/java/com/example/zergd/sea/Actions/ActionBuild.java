@@ -1,11 +1,11 @@
-package Actions;
+package com.example.zergd.sea.Actions;
 
 import java.util.ArrayList;
 
-import Astronaut.Astronaut;
-import Astronaut.Choice;
-import Building.*;
-import Main.Global;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Astronaut.Choice;
+import com.example.zergd.sea.Building.*;
+import com.example.zergd.sea.Global;
 
 public class ActionBuild extends Action {
 	

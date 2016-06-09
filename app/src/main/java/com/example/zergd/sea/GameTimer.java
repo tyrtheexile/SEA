@@ -1,7 +1,7 @@
-package Main;
+package com.example.zergd.sea;
 
-import Astronaut.*;
-import Building.*;
+import com.example.zergd.sea.Astronaut.*;
+import com.example.zergd.sea.Building.*;
 
 public class GameTimer {
 	

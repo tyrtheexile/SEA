@@ -1,6 +1,6 @@
-package Astronaut;
+package com.example.zergd.sea.Astronaut;
 
-import Main.Global;
+import com.example.zergd.sea.Global;
 
 public class Astronaut {
 	

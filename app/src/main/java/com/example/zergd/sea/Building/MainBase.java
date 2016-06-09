@@ -1,8 +1,8 @@
-package Building;
+package com.example.zergd.sea.Building;
 
-import Astronaut.Astronaut;
-import Items.*;
-import Main.Global;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Items.*;
+import com.example.zergd.sea.Global;
 
 public class MainBase {
 	

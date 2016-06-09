@@ -1,8 +1,8 @@
-package Items;
+package com.example.zergd.sea.Items;
 
-import Astronaut.Astronaut;
-import Building.MainBase;
-import Main.Global;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Building.MainBase;
+import com.example.zergd.sea.Global;
 
 public class SmallSolarPanel extends MultiItem {
 

@@ -1,7 +1,7 @@
-package Building;
+package com.example.zergd.sea.Building;
 
-import Astronaut.Astronaut;
-import Main.Global;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Global;
 
 public class BaseHub extends Building {
 

@@ -1,9 +1,9 @@
-package Astronaut;
+package com.example.zergd.sea.Astronaut;
 
 import java.util.Scanner;
-import Actions.*;
-import Building.*;
-import Main.Global;
+import com.example.zergd.sea.Actions.*;
+import com.example.zergd.sea.Building.*;
+import com.example.zergd.sea.Global;
 
 public class Choice {
 	

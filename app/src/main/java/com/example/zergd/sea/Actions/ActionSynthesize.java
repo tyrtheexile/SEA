@@ -1,13 +1,13 @@
-package Actions;
+package com.example.zergd.sea.Actions;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-import Astronaut.Astronaut;
-import Astronaut.Choice;
-import Building.MainBase;
-import Items.*;
-import Main.Global;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Astronaut.Choice;
+import com.example.zergd.sea.Building.MainBase;
+import com.example.zergd.sea.Items.*;
+import com.example.zergd.sea.Global;
 
 public class ActionSynthesize extends Action {
 	

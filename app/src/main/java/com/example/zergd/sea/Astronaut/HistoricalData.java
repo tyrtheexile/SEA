@@ -1,8 +1,8 @@
-package Astronaut;
+package com.example.zergd.sea.Astronaut;
 
 import java.util.ArrayList;
 
-import Building.MainBase;
+import com.example.zergd.sea.Building.MainBase;
 
 public class HistoricalData {
 	

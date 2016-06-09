@@ -1,4 +1,10 @@
-package Main;
+package com.example.zergd.sea;
+
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.*;
+import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
 public class Global {
 	
@@ -12,6 +18,8 @@ public class Global {
 	private static int timeIncrement=1000;
 	private static boolean immortal=false;
 	private static int basesize=20;
+    private static TextView outputView;
+    private static ScrollView scrollView;
 	
 	//Testmode is used to implement different starting setupds
 	//Testmode 1-default start
@@ -34,8 +42,9 @@ public class Global {
 	}
 	public static void TextDisp(String str) 
 	{
-        TextView text = (TextView)findViewById(R.id.DispWin);
+        TextView text = outputView;
         text.append("\n"+str);
+        scrollView.fullScroll(View.FOCUS_DOWN);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
@@ -52,4 +61,11 @@ public class Global {
 	public static void setTestmode(int testmode) {
 		Global.testmode = testmode;
 	}
+    public static void setView(TextView view,ScrollView scrollView)
+    {
+        Global.outputView = view;
+        Global.scrollView = scrollView;
+        view.setMovementMethod(new ScrollingMovementMethod());
+
+    }
 }

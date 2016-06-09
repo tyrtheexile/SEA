@@ -1,8 +1,8 @@
-package Items;
+package com.example.zergd.sea.Items;
 
-import Actions.ActionAddWater;
-import Astronaut.Astronaut;
-import Building.MainBase;
+import com.example.zergd.sea.Actions.ActionAddWater;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Building.MainBase;
 
 public class WaterPump extends Item {
 

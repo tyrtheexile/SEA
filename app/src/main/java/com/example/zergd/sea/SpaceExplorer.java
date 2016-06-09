@@ -1,7 +1,7 @@
-package Main;
+package com.example.zergd.sea;
 
-import Astronaut.Astronaut;
-import Building.MainBase;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Building.MainBase;
 
 
 public class SpaceExplorer
@@ -9,7 +9,7 @@ public class SpaceExplorer
 	public static void main(String[] args) {
 		Global.set_Debug(6);
 		Global.setImmortal(true);
-		Global.setTimeIncrement(10);
+		Global.setTimeIncrement(1000);
 		Global.setBasesize(10);
 		Global.setTestmode(2);
 		

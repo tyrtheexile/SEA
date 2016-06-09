@@ -1,10 +1,12 @@
 package com.example.zergd.sea;
 
 import android.support.v7.app.AppCompatActivity;
-import Astronaut.*;
-import Building.*;
+import com.example.zergd.sea.Astronaut.*;
+import com.example.zergd.sea.Building.*;
 import android.os.Bundle;
-import android.widget.*;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
 
 public class MainGame extends AppCompatActivity {
 
@@ -18,9 +20,10 @@ public class MainGame extends AppCompatActivity {
         setContentView(R.layout.activity_choice);
         
         loadSave();
+        Global.setView((TextView)findViewById(R.id.DispWin),(ScrollView)findViewById(R.id.ScrollWin));
 		Global.set_Debug(6);
 		Global.setImmortal(true);
-		Global.setTimeIncrement(10);
+		Global.setTimeIncrement(1000);
 		Global.setBasesize(10);
 		Global.setTestmode(2);
         
@@ -45,7 +48,9 @@ public class MainGame extends AppCompatActivity {
 
     Runnable done = new Runnable() {
         public void run() {
-        	Global.TextDisp("Testing")
+        	Global.TextDisp("Testing");
+            Global.TextDisp(""+astro.getAir());
+            astro.timePulse();
         }
     };
 

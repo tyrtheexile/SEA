@@ -1,9 +1,9 @@
-package Building;
+package com.example.zergd.sea.Building;
 
 import java.util.ArrayList;
 
-import Astronaut.Astronaut;
-import Main.Global;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Global;
 
 public class BuildGrid {
 	private Astronaut astro;

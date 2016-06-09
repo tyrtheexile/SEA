@@ -29,22 +29,25 @@
             android:layout_toEndOf="@+id/space"
             android:layout_toRightOf="@+id/space" />
 
-        <EditText
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:id="@+id/ScrollWin"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/DispWin"
+            android:scrollbars="vertical"
+            android:fillViewport="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="87dp"
-            android:text="Test test"
-            android:editable="false"
-            android:clickable="false"
-            android:enabled="false"
             android:layout_above="@+id/CH1"
-            android:nestedScrollingEnabled="true"
-            android:scrollIndicators="bottom" />
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/DispWin"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:maxLines = "150"
+                android:scrollbars = "vertical"/>
+
+        </ScrollView>
 
         <Space
             android:layout_width="20dp"

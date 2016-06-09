@@ -1,8 +1,8 @@
-package Items;
+package com.example.zergd.sea.Items;
 
 import java.util.ArrayList;
-import Astronaut.Astronaut;
-import Building.MainBase;
+import com.example.zergd.sea.Astronaut.Astronaut;
+import com.example.zergd.sea.Building.MainBase;
 
 public class InitItemArray {
 	
