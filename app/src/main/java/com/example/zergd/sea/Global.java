@@ -34,8 +34,8 @@ public class Global {
 	}
 	public static void TextDisp(String str) 
 	{
-		if (debug==1 || debug==2|| debug==6)
-			System.out.println("\n"+str);
+        TextView text = (TextView)findViewById(R.id.DispWin);
+        text.append("\n"+str);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
