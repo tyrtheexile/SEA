@@ -1,6 +1,7 @@
 package com.example.zergd.sea.Astronaut;
 
 import android.app.Activity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,6 +15,8 @@ public class Choice {
 	
 	private Astronaut astro;
 	private MainBase base;
+    private static int choice;
+    private static Boolean choiceFlag;
 	//public static Scanner inputStream = new Scanner(System.in);
 	
 	Action act1=null;
@@ -35,7 +38,38 @@ public class Choice {
 		Button button2=(Button)mainAct.findViewById(R.id.CH2);
 		button1.setText(act1.getActionName());
 		button2.setText(act2.getActionName());
-		int choicenum=3;
+
+        Choice.choiceFlag=false;
+        int choicenum;
+		button1.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Choice.choice=1;
+                Choice.choiceFlag=true;
+            }
+        });
+
+        button2.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Choice.choice=2;
+                Choice.choiceFlag=true;
+            }
+        });
+
+		while(choiceFlag==false)
+        {
+            try {
+                    Thread.sleep(100);
+                    Global.TextDisp("Waiting for Choice");
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        choicenum=Choice.choice;
 		return choicenum;
 	}
 

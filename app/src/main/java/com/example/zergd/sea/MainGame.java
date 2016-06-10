@@ -40,10 +40,10 @@ public class MainGame extends AppCompatActivity {
         public void run() {
 
             try {
-
-                Thread.sleep(Global.getTimeIncrement());
-                runOnUiThread(done);
-
+                while(true) {
+                    Thread.sleep(Global.getTimeIncrement());
+                    runOnUiThread(done);
+                }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -55,10 +55,10 @@ public class MainGame extends AppCompatActivity {
     Runnable done = new Runnable() {
         public void run() {
             Global.TextDisp("Tester");
-            //if (Global.getGameInProgress()==false) {
-
+            if (Global.getGameInProgress()==false) {
+                Global.setGameInProgress(true);
                 gTimer.StartGame();
-            //}
+            }
         }
     };
 
