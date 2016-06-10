@@ -48,7 +48,9 @@ public class ActionBuild extends Action {
 		while(success==false)
 		{
 			Global.TextDisp("What Column Number would you like to build at? ");
-			choice = Choice.getInput();
+			///////////////////////////////////////////////////////////////////////////
+			///////////////////////Getinputs can't work anymore
+			choice = 1;//Choice.getInput();
 			if (choice<1 || choice > base.getGrid().getSize())
 			{
 				Global.TextDisp("Input of of Bounds needs to be Between: 1 and "+base.getGrid().getSize());
@@ -68,7 +70,10 @@ public class ActionBuild extends Action {
 		while(success==false)
 		{
 			Global.TextDisp("What Row letter do you want to build at? ");
-			choice = Choice.getCharInput();
+
+			///////////////////////Major Janky Patch below before building implemented
+			choice = 1;//Choice.getCharInput();
+			///////////////////////////////////////////////////////////////////////////////////
 			char car=(char)choice;
 			letnum=(int)car-96;
 			if (letnum<1 || letnum > base.getGrid().getSize())
@@ -87,7 +92,7 @@ public class ActionBuild extends Action {
 		char ans='Q';
 		do{
 			Global.TextDisp("What Side Do you want to Build on (N,S,E,W)? ");
-			ans = Choice.getCharInput();
+			ans = 'N';//Choice.getCharInput();
 		} while (ans!='N'&&ans!='W'&&ans!='E'&&ans!='S');
 		return ans;
 	}
@@ -108,8 +113,9 @@ public class ActionBuild extends Action {
 				Global.TextDisp((counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
 				if (counter>6) break;
 			}
-			
-			int choice = Choice.getInput();
+
+			////////////////////////////////////////////////////Another Janky Bug fix/
+			int choice = 1;//Choice.getInput();
 			if (choice==0) {
 				setTime(1);
 				break;

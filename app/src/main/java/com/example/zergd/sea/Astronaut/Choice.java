@@ -1,15 +1,20 @@
 package com.example.zergd.sea.Astronaut;
 
+import android.app.Activity;
+import android.widget.Button;
+import android.widget.TextView;
+
 import java.util.Scanner;
 import com.example.zergd.sea.Actions.*;
 import com.example.zergd.sea.Building.*;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.R;
 
 public class Choice {
 	
 	private Astronaut astro;
 	private MainBase base;
-	public static Scanner inputStream = new Scanner(System.in);
+	//public static Scanner inputStream = new Scanner(System.in);
 	
 	Action act1=null;
 	Action act2=null;
@@ -23,14 +28,24 @@ public class Choice {
 	}
 	
 	//Asks for and returns a int - Static Choice Question
-	public static int getInput()
+	public static int getInput(Action act1,Action act2)
 	{
-		Global.TextDisp("\nWhat is your choice?: ");
-		int choicenum=inputStream.nextInt();
-
+		Activity mainAct = Global.getActivity();
+		Button button1=(Button)mainAct.findViewById(R.id.CH1);
+		Button button2=(Button)mainAct.findViewById(R.id.CH2);
+		button1.setText(act1.getActionName());
+		button2.setText(act2.getActionName());
+		int choicenum=3;
 		return choicenum;
 	}
-	
+
+	/////// Place holder for all the bad inputs
+	public static int getInput()
+	{
+		return 1;
+	}
+
+	/*
 	public static char getCharInput()
 	{
 		Global.TextDisp("\nWhat is your choice?: ");
@@ -38,7 +53,8 @@ public class Choice {
 
 		return choicenum;
 	}
-	
+	*/
+
 	//This is the Main Method of Choice
 	//It uses inter logic in choiceLogic() to make two actions and do the one selected Returns  Wait time
 	public int giveChoice()
@@ -59,7 +75,7 @@ public class Choice {
 		//Get Input - 1 or 2 Otherwise repeats
 		while (temp==true)
 		{
-			int input=getInput();
+			int input=getInput(act1,act2);
 			if (input==1){
 				selectedAct=act1;
 				temp=false;

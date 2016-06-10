@@ -1,5 +1,6 @@
 package com.example.zergd.sea;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.*;
@@ -20,6 +21,8 @@ public class Global {
 	private static int basesize=20;
     private static TextView outputView;
     private static ScrollView scrollView;
+    private static Activity currentActivity;
+    private static Boolean gameInProgress = false;
 	
 	//Testmode is used to implement different starting setupds
 	//Testmode 1-default start
@@ -67,5 +70,23 @@ public class Global {
         Global.scrollView = scrollView;
         view.setMovementMethod(new ScrollingMovementMethod());
 
+    }
+	public static TextView getTextView()
+	{
+		return outputView;
+	}
+    public static void setActivity(Activity act)
+    {
+        Global.currentActivity=act;
+    }
+    public static Activity getActivity()
+    {return Global.currentActivity;}
+
+    public static Boolean getGameInProgress()
+    {return Global.gameInProgress;}
+
+    public static void setGameInProgress(Boolean state)
+    {
+        Global.gameInProgress=state;
     }
 }

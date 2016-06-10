@@ -12,6 +12,7 @@ public class MainGame extends AppCompatActivity {
 
 	public Astronaut astro;
 	public MainBase base;
+    private GameTimer gTimer;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,11 @@ public class MainGame extends AppCompatActivity {
         setContentView(R.layout.activity_choice);
         
         loadSave();
+        loadGTimer();
+
         Global.setView((TextView)findViewById(R.id.DispWin),(ScrollView)findViewById(R.id.ScrollWin));
+        Global.setActivity(this);
+
 		Global.set_Debug(6);
 		Global.setImmortal(true);
 		Global.setTimeIncrement(1000);
@@ -33,24 +38,27 @@ public class MainGame extends AppCompatActivity {
 
     Runnable mTask = new Runnable() {
         public void run() {
-            // just sleep for 30 seconds.
-            for (int i=0;i<100;i++) {
-                try {
-                    Thread.sleep(Global.getTimeIncrement());
-                    runOnUiThread(done);
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
+
+            try {
+
+                Thread.sleep(Global.getTimeIncrement());
+                runOnUiThread(done);
+
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
             }
+
         }
     };
 
     Runnable done = new Runnable() {
         public void run() {
-        	Global.TextDisp("Testing");
-            Global.TextDisp(""+astro.getAir());
-            astro.timePulse();
+            Global.TextDisp("Tester");
+            //if (Global.getGameInProgress()==false) {
+
+                gTimer.StartGame();
+            //}
         }
     };
 
@@ -60,6 +68,9 @@ public class MainGame extends AppCompatActivity {
     	this.base = new MainBase("Alpha",astro);
     }
     
-    
+    protected void loadGTimer()
+    {
+        gTimer=new GameTimer(astro,base);
+    }
 
 }
