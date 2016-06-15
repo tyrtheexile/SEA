@@ -46,8 +46,9 @@ public class MainGame extends AppCompatActivity {
             try {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
-                    //runOnUiThread(done);
-                    testHandle.post(done);
+                    //runOnUiThread(game);
+                    testHandle.post(game);
+                    runOnUiThread(output);
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -57,13 +58,20 @@ public class MainGame extends AppCompatActivity {
         }
     };
 
-    Runnable done = new Runnable() {
+    Runnable game = new Runnable() {
         public void run() {
             Global.TextDisp("Tester");
             if (Global.getGameInProgress()==false) {
                 Global.setGameInProgress(true);
                 gTimer.StartGame();
             }
+        }
+    };
+
+    Runnable output = new Runnable() {
+        public void run() {
+            TextView text = (TextView)findViewById(R.id.DispWin);
+            text.append(Global.getOutputBlock());
         }
     };
 

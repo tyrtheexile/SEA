@@ -7,6 +7,8 @@ import android.widget.*;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class Global {
 	
 	//Debug Variable
@@ -23,6 +25,7 @@ public class Global {
     private static ScrollView scrollView;
     private static Activity currentActivity;
     private static Boolean gameInProgress = false;
+	private static ArrayList<String> outputStrings=new ArrayList<String>();
 	
 	//Testmode is used to implement different starting setupds
 	//Testmode 1-default start
@@ -43,7 +46,7 @@ public class Global {
 	public static void setTimeIncrement(int i) {
 		timeIncrement = i;
 	}
-	public static void TextDisp(String str) 
+	public static void TextDisp(final String str)
 	{
 	    Runnable dispText = new Runnable() {
 	        public void run() {
@@ -52,7 +55,7 @@ public class Global {
 	            scrollView.fullScroll(View.FOCUS_DOWN);
 	        }
 	    };
-		runOnUIThread(dispText);
+		Global.outputStrings.add(str);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
@@ -93,5 +96,17 @@ public class Global {
     public static void setGameInProgress(Boolean state)
     {
         Global.gameInProgress=state;
+    }
+
+    public static String getOutputBlock(){
+        String outputBlock="\n";
+        if (Global.outputStrings.isEmpty())
+            return "";
+        while(!Global.outputStrings.isEmpty()) {
+            String str = Global.outputStrings.get(0);
+            Global.outputStrings.remove(0);
+            outputBlock=outputBlock+str+"\n";
+        }
+        return outputBlock;
     }
 }
