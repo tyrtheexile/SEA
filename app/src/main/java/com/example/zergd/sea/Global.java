@@ -101,7 +101,7 @@ public class Global {
     public static String getOutputBlock(){
         String outputBlock="\n";
         if (Global.outputStrings.isEmpty())
-            return "";
+            return "Output is empty";
         while(!Global.outputStrings.isEmpty()) {
             String str = Global.outputStrings.get(0);
             Global.outputStrings.remove(0);
