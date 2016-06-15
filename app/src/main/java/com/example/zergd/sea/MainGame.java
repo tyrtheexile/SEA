@@ -41,13 +41,13 @@ public class MainGame extends AppCompatActivity {
     Runnable mTask = new Runnable() {
 
         public void run() {
-            //Looper.prepare();
-            //Handler testHandle = new Handler();
+            Looper.prepare();
+            Handler testHandle = new Handler();
             try {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
-                    runOnUiThread(done);
-                    //testHandle.post(done);
+                    //runOnUiThread(done);
+                    testHandle.post(done);
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block

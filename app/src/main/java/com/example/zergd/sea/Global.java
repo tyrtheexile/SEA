@@ -45,9 +45,14 @@ public class Global {
 	}
 	public static void TextDisp(String str) 
 	{
-        TextView text = outputView;
-        text.append("\n"+str);
-        scrollView.fullScroll(View.FOCUS_DOWN);
+	    Runnable dispText = new Runnable() {
+	        public void run() {
+	    		TextView text = outputView;
+	            text.append("\n"+str);
+	            scrollView.fullScroll(View.FOCUS_DOWN);
+	        }
+	    };
+		runOnUIThread(dispText);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
