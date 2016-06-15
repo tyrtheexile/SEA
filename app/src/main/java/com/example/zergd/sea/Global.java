@@ -46,16 +46,16 @@ public class Global {
 	public static void setTimeIncrement(int i) {
 		timeIncrement = i;
 	}
-	public static void TextDisp(final String str)
+	public static void TextDisp(String str)
 	{
-	    Runnable dispText = new Runnable() {
+	    /*Runnable dispText = new Runnable() {
 	        public void run() {
 	    		TextView text = outputView;
 	            text.append("\n"+str);
 	            scrollView.fullScroll(View.FOCUS_DOWN);
 	        }
-	    };
-		Global.outputStrings.add(str);
+	    };*/
+		outputStrings.add(str);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
@@ -101,7 +101,7 @@ public class Global {
     public static String getOutputBlock(){
         String outputBlock="\n";
         if (Global.outputStrings.isEmpty())
-            return "Output is empty";
+            return "Output is empty\n";
         while(!Global.outputStrings.isEmpty()) {
             String str = Global.outputStrings.get(0);
             Global.outputStrings.remove(0);
