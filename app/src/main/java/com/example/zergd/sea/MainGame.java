@@ -1,5 +1,7 @@
 package com.example.zergd.sea;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import com.example.zergd.sea.Astronaut.*;
 import com.example.zergd.sea.Building.*;
@@ -37,12 +39,15 @@ public class MainGame extends AppCompatActivity {
     }
 
     Runnable mTask = new Runnable() {
-        public void run() {
 
+        public void run() {
+            //Looper.prepare();
+            //Handler testHandle = new Handler();
             try {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     runOnUiThread(done);
+                    //testHandle.post(done);
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
