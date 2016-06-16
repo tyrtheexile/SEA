@@ -25,7 +25,8 @@ public class Global {
     private static ScrollView scrollView;
     private static Activity currentActivity;
     private static Boolean gameInProgress = false;
-	private static ArrayList<String> outputStrings=new ArrayList<String>();
+	public static ArrayList<String> outputStrings=new ArrayList<String>(){{add("OutputString1\n");}};
+    private static String button1="Choice1",button2="Choice2";
 	
 	//Testmode is used to implement different starting setupds
 	//Testmode 1-default start
@@ -55,7 +56,7 @@ public class Global {
 	            scrollView.fullScroll(View.FOCUS_DOWN);
 	        }
 	    };*/
-		outputStrings.add(str);
+		Global.outputStrings.add(str);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
@@ -99,14 +100,27 @@ public class Global {
     }
 
     public static String getOutputBlock(){
-        String outputBlock="\n";
+        String outputBlock="";
+
         if (Global.outputStrings.isEmpty())
             return "Output is empty\n";
-        while(!Global.outputStrings.isEmpty()) {
-            String str = Global.outputStrings.get(0);
-            Global.outputStrings.remove(0);
+        while(Global.outputStrings.size()>1) {
+            String str = Global.outputStrings.get(1);
+            Global.outputStrings.remove(1);
             outputBlock=outputBlock+str+"\n";
         }
         return outputBlock;
+    }
+
+    public static void changeButtons(String s1,String s2){
+        Global.button1=s1;
+        Global.button2=s2;
+    }
+
+    public static void changeButtons(){
+        Button button1=(Button)currentActivity.findViewById(R.id.CH1);
+        Button button2=(Button)currentActivity.findViewById(R.id.CH2);
+        button1.setText(Global.button1);
+        button2.setText(Global.button2);
     }
 }

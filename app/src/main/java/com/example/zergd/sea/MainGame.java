@@ -34,21 +34,33 @@ public class MainGame extends AppCompatActivity {
 		Global.setBasesize(10);
 		Global.setTestmode(2);
         
-        Thread thr = new Thread(mTask);
-        thr.start();
+        Thread gameThread = new Thread(tGame);
+        Thread dispThread = new Thread(tDisp);
+        dispThread.start();
+        gameThread.start();
     }
 
-    Runnable mTask = new Runnable() {
+    Runnable tDisp = new Runnable() {
+        public void run ()
+        {
+            while (true)
+            {
+                runOnUiThread(output);
+            }
+        }
+    };
+
+    Runnable tGame = new Runnable() {
 
         public void run() {
-            Looper.prepare();
-            Handler testHandle = new Handler();
+            //Looper.prepare();
+            //Handler testHandle = new Handler();
             try {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     //runOnUiThread(game);
-                    testHandle.post(game);
-                    runOnUiThread(output);
+                    //testHandle.post(game);
+                    gTimer.StartGame();
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -72,6 +84,7 @@ public class MainGame extends AppCompatActivity {
         public void run() {
             TextView text = (TextView)findViewById(R.id.DispWin);
             text.append(Global.getOutputBlock());
+            Global.changeButtons();
         }
     };
 

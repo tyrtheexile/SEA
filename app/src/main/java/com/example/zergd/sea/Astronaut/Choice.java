@@ -34,10 +34,10 @@ public class Choice {
 	public static int getInput(Action act1,Action act2)
 	{
 		Activity mainAct = Global.getActivity();
+
 		Button button1=(Button)mainAct.findViewById(R.id.CH1);
 		Button button2=(Button)mainAct.findViewById(R.id.CH2);
-		button1.setText(act1.getActionName());
-		button2.setText(act2.getActionName());
+        Global.changeButtons(act1.getActionName(),act2.getActionName());
 
         Choice.choiceFlag=false;
         int choicenum;
