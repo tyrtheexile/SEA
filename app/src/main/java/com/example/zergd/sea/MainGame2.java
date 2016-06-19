@@ -18,7 +18,7 @@ public class MainGame2 extends Activity {
     private MainBase base;
     private GameTimer gTimer;
 
-    private ButtonOps buttonOps = new ButtonOps(this);
+    private ButtonOps buttonOps;
 
     //This Handler sets the Button names inside the UI thread
     public Handler buttonNames = new Handler() {
@@ -68,6 +68,8 @@ public class MainGame2 extends Activity {
         Global.setTimeIncrement(1000);
         Global.setBasesize(10);
         Global.setTestmode(2);
+        buttonOps = new ButtonOps(this);
+        buttonOps.setOnClickListners();
 
         Thread mainGame = new Thread(mainGameLoop);
         mainGame.start();

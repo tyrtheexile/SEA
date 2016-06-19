@@ -49,7 +49,7 @@ public class Choice {
         int choice = 0;
         while (choice==0) {
             hand = Global.getHandler("buttonPress");
-            hand.sendMessage(msg);
+            //hand.sendMessage(msg);
             choice=Global.retrieveChoice();
         }
         return choice;

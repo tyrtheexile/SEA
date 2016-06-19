@@ -63,6 +63,7 @@ public class ButtonOps {
                     Global.choiceFlag=true;
                 }
                 buttonClicked=false;
+                Global.TextDisp("Button1 Clicked");
             }
         });
 
