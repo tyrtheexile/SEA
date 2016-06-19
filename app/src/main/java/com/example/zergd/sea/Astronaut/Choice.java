@@ -1,6 +1,9 @@
 package com.example.zergd.sea.Astronaut;
 
 import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,44 +36,23 @@ public class Choice {
 	//Asks for and returns a int - Static Choice Question
 	public static int getInput(Action act1,Action act2)
 	{
-		Activity mainAct = Global.getActivity();
+		//Set Buttons Names in UI Thread
+		Handler hand = Global.getHandler("buttonNames");
+		Message msg = new Message();
+		Bundle bundle = new Bundle();
+		bundle.putString("button1",act1.getActionName());
+		bundle.putString("button2",act2.getActionName());
+		msg.setData(bundle);
+		hand.sendMessage(msg);
 
-		Button button1=(Button)mainAct.findViewById(R.id.CH1);
-		Button button2=(Button)mainAct.findViewById(R.id.CH2);
-        Global.changeButtons(act1.getActionName(),act2.getActionName());
-
-        Choice.choiceFlag=false;
-        int choicenum;
-		button1.setOnClickListener( new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Choice.choice=1;
-                Choice.choiceFlag=true;
-            }
-        });
-
-        button2.setOnClickListener( new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Choice.choice=2;
-                Choice.choiceFlag=true;
-            }
-        });
-
-		while(choiceFlag==false)
-        {
-            try {
-                    Thread.sleep(100);
-                    Global.TextDisp("Waiting for Choice");
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+        //Get button pushed
+        int choice = 0;
+        while (choice==0) {
+            hand = Global.getHandler("buttonPress");
+            hand.sendMessage(msg);
+            choice=Global.retrieveChoice();
         }
-        choicenum=Choice.choice;
-		return choicenum;
+        return choice;
 	}
 
 	/////// Place holder for all the bad inputs

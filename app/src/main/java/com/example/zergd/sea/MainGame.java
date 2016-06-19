@@ -84,7 +84,7 @@ public class MainGame extends AppCompatActivity {
         public void run() {
             TextView text = (TextView)findViewById(R.id.DispWin);
             text.append(Global.getOutputBlock());
-            Global.changeButtons();
+            //Global.changeButtons();
         }
     };
 
@@ -93,7 +93,7 @@ public class MainGame extends AppCompatActivity {
     	this.astro = new Astronaut("Chris");
     	this.base = new MainBase("Alpha",astro);
     }
-    
+
     protected void loadGTimer()
     {
         gTimer=new GameTimer(astro,base);

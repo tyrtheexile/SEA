@@ -8,6 +8,7 @@ import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import android.os.*;
 
 public class Global {
 	
@@ -26,7 +27,13 @@ public class Global {
     private static Activity currentActivity;
     private static Boolean gameInProgress = false;
 	public static ArrayList<String> outputStrings=new ArrayList<String>(){{add("OutputString1\n");}};
-    private static String button1="Choice1",button2="Choice2";
+
+    public static Handler buttonNames;
+    public static Handler butttonPress;
+    public static Handler textUpdate;
+
+    public static int choice=0;
+    public static Boolean choiceFlag=false;
 	
 	//Testmode is used to implement different starting setupds
 	//Testmode 1-default start
@@ -56,7 +63,17 @@ public class Global {
 	            scrollView.fullScroll(View.FOCUS_DOWN);
 	        }
 	    };*/
-		Global.outputStrings.add(str);
+
+        //Gen 2
+		//Global.outputStrings.add(str);
+
+        //Gen 3
+        Handler hand = Global.getHandler("textDisp");
+        Message msg = new Message();
+        Bundle bundle = new Bundle();
+        bundle.putString("text",str);
+        msg.setData(bundle);
+        hand.sendMessage(msg);
 	}
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
@@ -112,15 +129,28 @@ public class Global {
         return outputBlock;
     }
 
-    public static void changeButtons(String s1,String s2){
-        Global.button1=s1;
-        Global.button2=s2;
+    public static void setHandler(Handler h1,Handler h2, Handler h3)
+    {
+        buttonNames = h1;
+        butttonPress = h2;
+        textUpdate = h3;
     }
 
-    public static void changeButtons(){
-        Button button1=(Button)currentActivity.findViewById(R.id.CH1);
-        Button button2=(Button)currentActivity.findViewById(R.id.CH2);
-        button1.setText(Global.button1);
-        button2.setText(Global.button2);
+    public static Handler getHandler(String name){
+        if (name.equals("buttonNames"))
+            return buttonNames;
+        if (name.equals("buttonPress"))
+            return butttonPress;
+        else
+            return textUpdate;
+    }
+
+    public static int retrieveChoice(){
+        if (choiceFlag==true)
+        {
+            choiceFlag=false;
+            return choice;
+        }
+        return 0;
     }
 }
