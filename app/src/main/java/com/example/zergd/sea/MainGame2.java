@@ -16,6 +16,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import android.util.*;
 
 
 public class MainGame2 extends Activity {
@@ -151,6 +152,7 @@ public class MainGame2 extends Activity {
         {
             ex.printStackTrace();
             astro.addAir(1000);
+            Log.e("SAE I/O Knp","System Write failed");
         }
 
         //Save mainBase
