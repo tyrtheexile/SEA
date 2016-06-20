@@ -5,8 +5,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.os.*;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -19,7 +17,6 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import android.util.*;
-import android.app.FragmentManager.*;
 
 
 public class MainGame2 extends Activity {
@@ -83,6 +80,7 @@ public class MainGame2 extends Activity {
         buttonOps.setOnClickListners();
 
         loadInFragments();
+        fragManager.findFragmentById(R.id.astroFragId).onStart();
 
         Thread mainGame = new Thread(mainGameLoop);
         mainGame.start();
@@ -95,8 +93,6 @@ public class MainGame2 extends Activity {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
-                    Fragment astroFrag = fragManager.findFragmentById(R.id.astroFrag);
-                    astroFrag.updateAstro(1,2,3);
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
