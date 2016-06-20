@@ -77,9 +77,7 @@ public class MainGame2 extends Activity {
         buttonOps = new ButtonOps(this);
         buttonOps.setOnClickListners();
 
-        File file = new File("astroOut.bin");
-        if(file.exists())
-            Global.TextDisp("File is HereeEEEEEEEEEEEEEEEEEEEE");
+        loadInFragments();
 
         Thread mainGame = new Thread(mainGameLoop);
         mainGame.start();
@@ -105,7 +103,6 @@ public class MainGame2 extends Activity {
         File asF = new File("astroOut.bin");
         File bsF = new File("baseOut.bin");
         if(asF.exists() && bsF.exists()) {
-            Global.TextDisp("Files are here in load");
             try
             {
                 ObjectInputStream aIn = new ObjectInputStream(new FileInputStream(new File("astroOut.bin")));
@@ -127,7 +124,6 @@ public class MainGame2 extends Activity {
 
         }
         else {
-            Global.TextDisp("No Files Found :(");
             this.astro = new Astronaut("Chris");
             this.base = new MainBase("Alpha", astro);
         }
@@ -139,8 +135,8 @@ public class MainGame2 extends Activity {
     }
 
     @Override
-    public void onStop(){
-        super.onStop();
+    public void onPause(){
+        super.onPause();
 
         //Save Astro
         try
@@ -149,6 +145,7 @@ public class MainGame2 extends Activity {
             astroOut.writeObject(this.astro); // write the class as an 'object'
             astroOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
             astroOut.close();// close the stream
+            Global.TextDisp("File Written");
         }
         catch(Exception ex)
         {
@@ -167,5 +164,9 @@ public class MainGame2 extends Activity {
         {
             ex.printStackTrace();
         }
+    }
+
+    private void loadInFragments() {
+
     }
 }
