@@ -2,7 +2,8 @@
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/SpaceBackground">
 
         <Button
             android:layout_width="fill_parent"
@@ -36,7 +37,8 @@
             android:layout_above="@+id/CH1"
             android:clickable="true"
             android:layout_toRightOf="@+id/astroFrag"
-            android:layout_toLeftOf="@+id/buildFrag">
+            android:layout_toLeftOf="@+id/buildFrag"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/DispWin"
@@ -44,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:maxLines = "150"
                 android:scrollbars = "vertical"
-                android:gravity="bottom"/>
+                android:gravity="bottom"
+                android:textColor="@color/SpaceTextColor" />
 
         </ScrollView>
 

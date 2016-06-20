@@ -14,7 +14,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/airText" />
+        android:id="@+id/airText"
+        android:editable="false"
+        android:clickable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -27,7 +29,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/waterText" />
+        android:id="@+id/waterText"
+        android:editable="false"
+        android:clickable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -40,5 +44,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText" />
+        android:id="@+id/editText"
+        android:editable="false"
+        android:clickable="false" />
 </LinearLayout>

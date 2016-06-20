@@ -146,12 +146,10 @@ public class MainGame2 extends Activity {
             astroOut.writeObject(this.astro); // write the class as an 'object'
             astroOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
             astroOut.close();// close the stream
-            Global.TextDisp("File Written");
         }
         catch(Exception ex)
         {
             ex.printStackTrace();
-            astro.addAir(1000);
             Log.e("SAE I/O Knp","System Write failed");
         }
 
