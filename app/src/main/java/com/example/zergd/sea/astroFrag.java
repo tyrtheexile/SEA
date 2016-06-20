@@ -22,8 +22,7 @@ public class astroFrag extends Fragment {
         return view;
     }
 
-    @Override
-    public void onStart(int air, int water, int food)
+    public void updateAstro(int air, int water, int food)
     {
         TextView airT = (TextView) view.findViewById(R.id.airText);
         airT.setText(air);

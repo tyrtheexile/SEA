@@ -80,7 +80,7 @@ public class MainGame2 extends Activity {
         buttonOps.setOnClickListners();
 
         loadInFragments();
-        fragManager.findFragmentById(R.id.astroFragId).onStart();
+
 
         Thread mainGame = new Thread(mainGameLoop);
         mainGame.start();
@@ -93,6 +93,8 @@ public class MainGame2 extends Activity {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
+                    astroFrag astroFrag = (astroFrag) fragManager.findFragmentById(R.id.astroFragId);
+                    astroFrag.updateAstro(1,2,3);
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
