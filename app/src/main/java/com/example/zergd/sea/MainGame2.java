@@ -137,7 +137,7 @@ public class MainGame2 extends Activity {
     @Override
     public void onPause(){
         super.onPause();
-
+        astro.addAir(1000);
         //Save Astro
         try
         {
