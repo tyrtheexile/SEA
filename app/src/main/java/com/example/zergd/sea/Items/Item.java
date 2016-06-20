@@ -3,7 +3,7 @@ package com.example.zergd.sea.Items;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 
-public abstract class Item {
+public abstract class Item implements java.io.Serializable{
 	
 	private String name;
 	private int ID;

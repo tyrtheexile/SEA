@@ -2,8 +2,10 @@ package com.example.zergd.sea.Astronaut;
 
 import com.example.zergd.sea.Global;
 
-public class Astronaut {
-	
+public class Astronaut implements java.io.Serializable {
+
+	private static final long serialVersionUID = 12;
+
 	private String name;
 	private int air;
 	private int water;

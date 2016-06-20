@@ -4,8 +4,10 @@ import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Items.*;
 import com.example.zergd.sea.Global;
 
-public class MainBase {
-	
+public class MainBase implements java.io.Serializable {
+
+	private static final long serialVersionUID = 27;
+
 	private String name;
 	private int alloy;
 	private int alloyMax;

@@ -11,6 +11,10 @@ import android.widget.TextView;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
 
 public class MainGame2 extends Activity {
 
@@ -99,5 +103,36 @@ public class MainGame2 extends Activity {
     protected void loadGTimer()
     {
         gTimer=new GameTimer(astro,base);
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+
+        //Save Astro
+        try
+        {
+            ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
+            astroOut.writeObject(this.astro); // write the class as an 'object'
+            astroOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
+            astroOut.close();// close the stream
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+        //Save mainBase
+        try
+        {
+            ObjectOutputStream baseOut = new ObjectOutputStream(new FileOutputStream(new File("baseOut.bin"))); //Select where you wish to save the file...
+            baseOut.writeObject(this.base); // write the class as an 'object'
+            baseOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
+            baseOut.close();// close the stream
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
     }
 }
