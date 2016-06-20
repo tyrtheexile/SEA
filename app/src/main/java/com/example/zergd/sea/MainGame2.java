@@ -75,6 +75,10 @@ public class MainGame2 extends Activity {
         buttonOps = new ButtonOps(this);
         buttonOps.setOnClickListners();
 
+        File file = new File("astroOut.bin");
+        if(file.exists())
+            Global.TextDisp("File is HereeEEEEEEEEEEEEEEEEEEEE");
+
         Thread mainGame = new Thread(mainGameLoop);
         mainGame.start();
     }
