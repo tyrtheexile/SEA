@@ -36,7 +36,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/foodImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
         android:src="@android:drawable/sym_def_app_icon" />
@@ -44,7 +44,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/foodText"
         android:editable="false"
         android:clickable="false" />
 </LinearLayout>

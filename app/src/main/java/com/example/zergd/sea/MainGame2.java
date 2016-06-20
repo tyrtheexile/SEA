@@ -1,6 +1,8 @@
 package com.example.zergd.sea;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.os.*;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +19,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import android.util.*;
+import android.app.FragmentManager.*;
 
 
 public class MainGame2 extends Activity {
@@ -26,6 +29,7 @@ public class MainGame2 extends Activity {
     private GameTimer gTimer;
 
     private ButtonOps buttonOps;
+    private FragmentManager fragManager;
 
     //This Handler sets the Button names inside the UI thread
     public Handler buttonNames = new Handler() {
@@ -91,6 +95,8 @@ public class MainGame2 extends Activity {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
+                    Fragment astroFrag = fragManager.findFragmentById(R.id.astroFrag);
+                    astroFrag.updateAstro(1,2,3);
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -168,6 +174,6 @@ public class MainGame2 extends Activity {
     }
 
     private void loadInFragments() {
-
+        fragManager = getFragmentManager();
     }
 }
