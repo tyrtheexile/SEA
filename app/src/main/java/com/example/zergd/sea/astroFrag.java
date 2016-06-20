@@ -19,8 +19,8 @@ import android.widget.TextView;
  * create an instance of this fragment.
  *
  */
-public class astroFrag extends Fragment {
-    @Override
+public class astroFrag extends FragmentActivity {
+    //@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.astro_frag, container, false);
