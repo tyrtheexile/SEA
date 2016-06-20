@@ -137,7 +137,7 @@ public class MainGame2 extends Activity {
     @Override
     public void onPause(){
         super.onPause();
-        astro.addAir(1000);
+
         //Save Astro
         try
         {
@@ -150,6 +150,7 @@ public class MainGame2 extends Activity {
         catch(Exception ex)
         {
             ex.printStackTrace();
+            astro.addAir(1000);
         }
 
         //Save mainBase
