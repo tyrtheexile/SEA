@@ -74,7 +74,7 @@
         android:name="android.app.ListFragment"
         android:id="@+id/buildFrag"
         android:layout_alignParentTop="true"
-        class="android.app.ListFragment"
+        class="com.example.zergd.sea.baseFrag"
         android:layout_above="@+id/CH2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="false" />

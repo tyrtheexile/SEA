@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alloyImg"
+        android:minHeight="20dp"
+        android:minWidth="50dp"
+        android:src="@android:drawable/progress_indeterminate_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alloyText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/carbonImg"
+        android:minHeight="20dp"
+        android:minWidth="50dp"
+        android:src="@android:drawable/ic_menu_always_landscape_portrait" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/carbonText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hydrogenImg"
+        android:minHeight="20dp"
+        android:minWidth="50dp"
+        android:src="@android:drawable/ic_menu_today" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hydrogenText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/energyImg"
+        android:minHeight="20dp"
+        android:minWidth="50dp"
+        android:src="@android:drawable/sym_contact_card" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/energyText" />
+
+</LinearLayout>
