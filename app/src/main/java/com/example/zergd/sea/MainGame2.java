@@ -12,7 +12,9 @@ import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 
@@ -100,8 +102,35 @@ public class MainGame2 extends Activity {
 
     protected void loadSave()
     {
-        this.astro = new Astronaut("Chris");
-        this.base = new MainBase("Alpha",astro);
+        File asF = new File("astroOut.bin");
+        File bsF = new File("baseOut.bin");
+        if(asF.exists() && bsF.exists()) {
+            Global.TextDisp("Files are here in load");
+            try
+            {
+                ObjectInputStream aIn = new ObjectInputStream(new FileInputStream(new File("astroOut.bin")));
+                astro = (Astronaut)aIn.readObject();
+            }
+            catch(Exception ex)
+            {
+                ex.printStackTrace();
+            }
+            try
+            {
+                ObjectInputStream bIn = new ObjectInputStream(new FileInputStream(new File("baseOut.bin")));
+                base = (MainBase)bIn.readObject();
+            }
+            catch(Exception ex)
+            {
+                ex.printStackTrace();
+            }
+
+        }
+        else {
+            Global.TextDisp("No Files Found :(");
+            this.astro = new Astronaut("Chris");
+            this.base = new MainBase("Alpha", astro);
+        }
     }
 
     protected void loadGTimer()

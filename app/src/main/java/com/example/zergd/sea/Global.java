@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import android.os.*;
 
-public class Global {
+public class Global implements java.io.Serializable {
 	
 	//Debug Variable
 	// Debug 0 - No Debug

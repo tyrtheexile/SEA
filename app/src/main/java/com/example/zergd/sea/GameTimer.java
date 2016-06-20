@@ -3,7 +3,7 @@ package com.example.zergd.sea;
 import com.example.zergd.sea.Astronaut.*;
 import com.example.zergd.sea.Building.*;
 
-public class GameTimer {
+public class GameTimer implements java.io.Serializable {
 	
 	private Boolean endGameHard=false;
 	private int actionTimer=10;
