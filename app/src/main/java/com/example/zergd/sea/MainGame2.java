@@ -93,8 +93,18 @@ public class MainGame2 extends Activity {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
+
+                    ////////////
                     astroFrag astroFrag = (astroFrag) fragManager.findFragmentById(R.id.astroFragId);
-                    astroFrag.updateAstro(1,2,3);
+                    Handler astroHandler = astroFrag.getHandler();
+                    Bundle bundle = new Bundle();
+                    Message mes = new Message();
+                    bundle.putInt("air",astro.getAir());
+                    bundle.putInt("water",astro.getWater());
+                    bundle.putInt("food",astro.getFood());
+                    mes.setData(bundle);
+                    astroHandler.sendMessage(mes);
+                    ////////////
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -147,9 +157,14 @@ public class MainGame2 extends Activity {
         try
         {
             ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
+            Log.e("test","1111111111111111111");
             astroOut.writeObject(this.astro); // write the class as an 'object'
+            Log.e("test","2222222222222222222222");
             astroOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
+            Log.e("test","33333333333333333333333");
             astroOut.close();// close the stream
+            Log.e("test","44444444444444444444444");
+            Log.e("SAE I/O Knp","System Write failed");
         }
         catch(Exception ex)
         {

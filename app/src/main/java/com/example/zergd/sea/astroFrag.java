@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 //import android.support.v4.app.Fragment;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,10 +27,25 @@ public class astroFrag extends Fragment {
     public void updateAstro(int air, int water, int food)
     {
         TextView airT = (TextView) view.findViewById(R.id.airText);
-        airT.setText(air);
+        airT.setText(air+"");
         TextView waterT = (TextView) view.findViewById(R.id.waterText);
-        waterT.setText(water);
+        waterT.setText(water+"");
         TextView foodT = (TextView) view.findViewById(R.id.foodText);
-        foodT.setText(food);
+        foodT.setText(food+"");
+    }
+
+    public Handler updateAstroHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            Bundle bundle = msg.getData();
+            int air= bundle.getInt("air");
+            int water= bundle.getInt("water");
+            int food= bundle.getInt("food");
+            updateAstro(air,water,food);
+        }
+    };
+
+    public Handler getHandler(){
+        return updateAstroHandler;
     }
 }
