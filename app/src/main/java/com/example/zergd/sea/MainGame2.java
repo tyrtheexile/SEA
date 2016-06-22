@@ -156,7 +156,13 @@ public class MainGame2 extends Activity {
         //Save Astro
         try
         {
-            ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
+            Log.e("test","File......");
+            File file=new File("astroOut.bin");
+            Log.e("test","File Output Stream");
+            FileOutputStream fop = new FileOutputStream(file);
+            Log.e("test","Object Output Stream");
+            ObjectOutputStream astroOut = new ObjectOutputStream(fop);
+            //ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
             Log.e("test","1111111111111111111");
             astroOut.writeObject(this.astro); // write the class as an 'object'
             Log.e("test","2222222222222222222222");
