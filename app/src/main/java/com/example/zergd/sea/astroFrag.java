@@ -34,6 +34,7 @@ public class astroFrag extends Fragment {
         foodT.setText(food+"");
     }
 
+    //Update handler
     public Handler updateAstroHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
