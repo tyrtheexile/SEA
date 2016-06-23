@@ -69,8 +69,10 @@ public class MainGame2 extends Activity {
             int hide = bund.getInt("hide");
             if (hide==0)
                 fragManager.beginTransaction().hide(mChoice).commit();
-            else
+            else {
                 fragManager.beginTransaction().show(mChoice).commit();
+                clearMainText();
+            }
         }
     };
 
@@ -111,10 +113,10 @@ public class MainGame2 extends Activity {
             ///Main game loop here
             try {
                 while(true) {
+                    clearMainText();
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
                     updateUI();
-
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -238,5 +240,11 @@ public class MainGame2 extends Activity {
         mesb.setData(bundleb);
         baseHandler.sendMessage(mesb);
         ////////////
+    }
+
+    public void clearMainText()
+    {
+        TextView text = (TextView)findViewById(R.id.DispWin);
+        text.setText("");
     }
 }

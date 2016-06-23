@@ -4,38 +4,69 @@
     android:layout_height="match_parent">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="-----------"
-        android:id="@+id/button1" />
+        android:id="@+id/button1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        style="@android:style/Theme.Holo"
+        android:background="@color/SpaceButtonColor"
+        android:textColor="@color/SpaceButtonText" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="-----------"
-        android:id="@+id/button2" />
+        android:id="@+id/button2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/SpaceButtonColor"
+        android:textColor="@color/SpaceButtonText" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="-----------"
-        android:id="@+id/button3" />
+        android:id="@+id/button3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/SpaceButtonColor"
+        android:textColor="@color/SpaceButtonText" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="-----------"
-        android:id="@+id/button4" />
+        android:id="@+id/button4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/SpaceButtonColor"
+        android:textColor="@color/SpaceButtonText" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="-----------"
-        android:id="@+id/button5" />
+        android:id="@+id/button5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/SpaceButtonColor"
+        android:textColor="@color/SpaceButtonText" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="-----------"
-        android:id="@+id/button6" />
+        android:id="@+id/button6"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/SpaceButtonColor"
+        android:textColor="@color/SpaceButtonText" />
 </LinearLayout>
