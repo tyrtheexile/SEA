@@ -37,7 +37,7 @@
             android:layout_above="@+id/CH1"
             android:clickable="true"
             android:layout_toRightOf="@+id/astroFragId"
-            android:layout_toLeftOf="@+id/buildFrag"
+            android:layout_toLeftOf="@+id/baseFrag"
             android:layout_marginBottom="10dp">
 
             <TextView
@@ -76,11 +76,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:name="android.app.ListFragment"
-        android:id="@+id/buildFrag"
+        android:id="@+id/baseFrag"
         android:layout_alignParentTop="true"
         class="com.example.zergd.sea.baseFrag"
         android:layout_above="@+id/CH2"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false" />
+        android:layout_alignParentEnd="false"
+        tools:layout="@layout/base_frag" />
 </RelativeLayout>
 

@@ -94,18 +94,8 @@ public class MainGame2 extends Activity {
                 while(true) {
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
+                    updateUI();
 
-                    ////////////
-                    astroFrag astroFrag = (astroFrag) fragManager.findFragmentById(R.id.astroFragId);
-                    Handler astroHandler = astroFrag.getHandler();
-                    Bundle bundle = new Bundle();
-                    Message mes = new Message();
-                    bundle.putInt("air",astro.getAir());
-                    bundle.putInt("water",astro.getWater());
-                    bundle.putInt("food",astro.getFood());
-                    mes.setData(bundle);
-                    astroHandler.sendMessage(mes);
-                    ////////////
                 }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -133,7 +123,7 @@ public class MainGame2 extends Activity {
                 ex.printStackTrace();
                 Log.e("Test",Log.getStackTraceString(ex));
             }
-            Log.e("test","\n\n\n Astro loade\n\n");
+            //Log.e("test","\n\n\n Astro loade\n\n");
             try
             {
                 FileInputStream fop2 = openFileInput("baseOut.bin");
@@ -146,7 +136,7 @@ public class MainGame2 extends Activity {
                 ex.printStackTrace();
                 Log.e("Test",Log.getStackTraceString(ex));
             }
-            Log.e("Test","End of Load in"+astro.getName());
+            //Log.e("Test","End of Load in"+astro.getName());
 
         }
         else {
@@ -197,5 +187,31 @@ public class MainGame2 extends Activity {
 
     private void loadInFragments() {
         fragManager = getFragmentManager();
+    }
+
+    private void updateUI(){
+        ////////////
+        astroFrag astroFrag = (astroFrag) fragManager.findFragmentById(R.id.astroFragId);
+        Handler astroHandler = astroFrag.getHandler();
+        Bundle bundle = new Bundle();
+        Message mes = new Message();
+        bundle.putInt("air",astro.getAir());
+        bundle.putInt("water",astro.getWater());
+        bundle.putInt("food",astro.getFood());
+        mes.setData(bundle);
+        astroHandler.sendMessage(mes);
+        ////////////
+        ////////////
+        baseFrag baseFrag = (baseFrag) fragManager.findFragmentById(R.id.baseFrag);
+        Handler baseHandler = baseFrag.getHandler();
+        Bundle bundleb = new Bundle();
+        Message mesb = new Message();
+        bundleb.putInt("alloy",base.getAlloy());
+        bundleb.putInt("carbon",base.getCarbon());
+        bundleb.putInt("hydrogen",base.getHydrogen());
+        bundleb.putInt("energy",base.getEnergy());
+        mes.setData(bundleb);
+        baseHandler.sendMessage(mesb);
+        ////////////
     }
 }
