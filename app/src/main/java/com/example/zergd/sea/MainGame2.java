@@ -117,28 +117,29 @@ public class MainGame2 extends Activity {
     protected void loadSave()
     {
         File asF = new File(getFilesDir()+"/astroOut.bin");
-        Log.e("Test",getFilesDir()+"/astroOut.bin");
+        //Log.e("Test",getFilesDir()+"/astroOut.bin");
         File bsF = new File(getFilesDir()+"/baseOut.bin");
         if(asF.exists() && bsF.exists()) {
-            Log.e("test","inside if2.00000000000");
+            //Log.e("test","inside if2.00000000000");
             try
             {
                 FileInputStream fop = openFileInput("astroOut.bin");
                 ObjectInputStream aIn = new ObjectInputStream(fop);
                 //ObjectInputStream aIn = new ObjectInputStream(new FileInputStream(new File("astroOut.bin")));
-                astro = (Astronaut)aIn.readObject();
+                this.astro = (Astronaut)aIn.readObject();
             }
             catch(Exception ex)
             {
                 ex.printStackTrace();
                 Log.e("Test",Log.getStackTraceString(ex));
             }
+            Log.e("test","\n\n\n Astro loade\n\n");
             try
             {
                 FileInputStream fop2 = openFileInput("baseOut.bin");
                 ObjectInputStream bIn = new ObjectInputStream(fop2);
                 //ObjectInputStream bIn = new ObjectInputStream(new FileInputStream(new File("baseOut.bin")));
-                base = (MainBase)bIn.readObject();
+                this.base = (MainBase)bIn.readObject();
             }
             catch(Exception ex)
             {
