@@ -14,7 +14,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/space"
-            android:layout_toLeftOf="@+id/space" />
+            android:layout_toLeftOf="@+id/space"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp" />
 
         <Button
             android:layout_width="fill_parent"
@@ -25,7 +27,24 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/space"
-            android:layout_toRightOf="@+id/space" />
+            android:layout_toRightOf="@+id/space"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/astroFragId"
+        android:layout_toLeftOf="@+id/baseFrag"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_above="@+id/mainFrame" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -34,8 +53,8 @@
         android:layout_toLeftOf="@+id/baseFrag"
         android:layout_above="@+id/CH1"
         android:layout_alignParentStart="false"
-        android:layout_alignParentTop="true"
-        android:id="@+id/mainFrame">
+        android:id="@+id/mainFrame"
+        android:layout_marginTop="30dp">
 
         <ScrollView
                 android:id="@+id/ScrollWin"
@@ -91,5 +110,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="false"
         tools:layout="@layout/base_frag" />
+
 </RelativeLayout>
 
