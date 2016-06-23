@@ -85,19 +85,23 @@ public class ActionSynthesize extends Action {
 			bund.putString("but"+i,"-------");
 		}
 
+        Global.log("First Hide message Starting");
         Message frag = new Message();
         Bundle fragb = new Bundle();
         fragb.putInt("hide",1);
         frag.setData(fragb);
         multiHandler.sendMessage(frag);
 
+        Global.log("Hide Complete, Send bundle string");
         Message msg = new Message();
         msg.setData(bund);
         multiChoiceFrag.getHandler().sendMessage(msg);
 
-        while (Choice.getInput()!=10)
+        Global.log("Before while");
+        while (Choice.getInput()==10)
 		{
             try {
+                Global.log("Before the Sleep insdie While");
                Thread.sleep(100);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
@@ -105,6 +109,7 @@ public class ActionSynthesize extends Action {
             }
 		}
 
+        Global.log("Before Hide");
         Message frg = new Message();
         Bundle frgb = new Bundle();
         frgb.putInt("hide",0);

@@ -3,6 +3,7 @@ package com.example.zergd.sea;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.widget.*;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
@@ -152,5 +153,10 @@ public class Global implements java.io.Serializable {
             return choice;
         }
         return 0;
+    }
+
+    public static void log(String s)
+    {
+        Log.e("RTest: ", s);
     }
 }
