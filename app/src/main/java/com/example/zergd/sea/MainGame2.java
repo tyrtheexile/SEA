@@ -9,6 +9,7 @@ import android.os.*;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.example.zergd.sea.Actions.ActionSynthesize;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 
@@ -208,6 +209,7 @@ public class MainGame2 extends Activity {
         fragManager = getFragmentManager();
         mChoice = new multiChoiceFrag();
         //mChoice.addHandler(Handler astro.getChoice().getHandler());
+        ActionSynthesize.setHandler(showHideMainFrag);
         fragManager.beginTransaction().add(R.id.mainFrame, mChoice).commit();
         fragManager.beginTransaction().hide(mChoice).commit();
     }
