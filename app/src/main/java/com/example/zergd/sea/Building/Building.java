@@ -17,7 +17,7 @@ import com.example.zergd.sea.Global;
  */
 
 
-public abstract class Building implements Cloneable {
+public abstract class Building implements java.io.Serializable {
 	
 	protected Astronaut astro;
 	protected MainBase base;
