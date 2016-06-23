@@ -34,7 +34,8 @@
         android:layout_toLeftOf="@+id/baseFrag"
         android:layout_above="@+id/CH1"
         android:layout_alignParentStart="false"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:id="@+id/mainFrame">
 
         <ScrollView
                 android:id="@+id/ScrollWin"
