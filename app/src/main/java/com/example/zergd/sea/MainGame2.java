@@ -181,6 +181,7 @@ public class MainGame2 extends Activity {
         catch(Exception ex)
         {
             ex.printStackTrace();
+            Log.e("Test",Log.getStackTraceString(ex));
             Log.e("SAE I/O Knp","System Write failed");
         }
 
