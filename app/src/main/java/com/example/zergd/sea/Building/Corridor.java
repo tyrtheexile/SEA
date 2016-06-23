@@ -3,7 +3,7 @@ package com.example.zergd.sea.Building;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Global;
 
-public class Corridor extends Building {
+public class Corridor extends Building implements java.io.Serializable{
 
 	public Corridor(Astronaut astro, MainBase base) {
 		super(astro, base);
