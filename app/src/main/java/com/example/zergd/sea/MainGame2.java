@@ -3,6 +3,7 @@ package com.example.zergd.sea;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.*;
 import android.widget.ScrollView;
@@ -165,7 +166,9 @@ public class MainGame2 extends Activity {
             }
             */
             Log.e("test","File Output Stream");
-            FileOutputStream fop = new FileOutputStream("astroOut.bin");
+            FileOutputStream fop = openFileOutput("astroOut.bin", Context.MODE_PRIVATE);
+
+            //FileOutputStream fop = new FileOutputStream("astroOut.bin");
             Log.e("test","Object Output Stream");
             ObjectOutputStream astroOut = new ObjectOutputStream(fop);
             //ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
