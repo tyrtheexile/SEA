@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/alloyText"
         android:clickable="false"
-        android:editable="false" />
+        android:editable="false"
+        android:textIsSelectable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/carbonText"
         android:clickable="false"
-        android:editable="false" />
+        android:editable="false"
+        android:textIsSelectable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -46,7 +48,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/hydrogenText"
         android:clickable="false"
-        android:editable="false" />
+        android:editable="false"
+        android:textIsSelectable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -61,6 +64,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/energyText"
         android:clickable="false"
-        android:editable="false" />
+        android:editable="false"
+        android:textIsSelectable="false" />
 
 </LinearLayout>

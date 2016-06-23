@@ -16,7 +16,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/airText"
         android:editable="false"
-        android:clickable="false" />
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -31,7 +35,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/waterText"
         android:editable="false"
-        android:clickable="false" />
+        android:clickable="false"
+        android:textIsSelectable="false" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -46,5 +51,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/foodText"
         android:editable="false"
-        android:clickable="false" />
+        android:clickable="false"
+        android:textIsSelectable="false" />
 </LinearLayout>

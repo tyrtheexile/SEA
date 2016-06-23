@@ -27,31 +27,38 @@
             android:layout_toEndOf="@+id/space"
             android:layout_toRightOf="@+id/space" />
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/astroFragId"
+        android:layout_toLeftOf="@+id/baseFrag"
+        android:layout_above="@+id/CH1"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true">
+
         <ScrollView
-            android:id="@+id/ScrollWin"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            android:fillViewport="true"
-            android:layout_alignParentTop="true"
-            android:layout_above="@+id/CH1"
-            android:clickable="true"
-            android:layout_toRightOf="@+id/astroFragId"
-            android:layout_toLeftOf="@+id/baseFrag"
-            android:layout_marginBottom="10dp">
-
-            <TextView
-                android:id="@+id/DispWin"
+                android:id="@+id/ScrollWin"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:maxLines = "150"
-                android:scrollbars = "vertical"
-                android:gravity="bottom"
-                android:textColor="@color/SpaceTextColor" />
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical"
+                android:fillViewport="true"
+            android:clickable="true"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom">
 
-        </ScrollView>
+                <TextView
+                    android:id="@+id/DispWin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines = "150"
+                    android:scrollbars = "vertical"
+                    android:gravity="bottom"
+                    android:textColor="@color/SpaceTextColor" />
 
-        <Space
+            </ScrollView>
+    </FrameLayout>
+
+    <Space
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentBottom="true"
