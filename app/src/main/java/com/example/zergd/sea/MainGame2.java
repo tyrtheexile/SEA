@@ -145,6 +145,7 @@ public class MainGame2 extends Activity {
                 ex.printStackTrace();
                 Log.e("Test",Log.getStackTraceString(ex));
             }
+            Log.e("Test","End of Load in"+astro.getName());
 
         }
         else {
