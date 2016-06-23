@@ -200,7 +200,7 @@ public class MainGame2 extends Activity {
         bundle.putInt("food",astro.getFood());
         mes.setData(bundle);
         astroHandler.sendMessage(mes);
-        ////////////
+        ///////////
         ////////////
         baseFrag baseFrag = (baseFrag) fragManager.findFragmentById(R.id.baseFrag);
         Handler baseHandler = baseFrag.getHandler();
@@ -210,7 +210,7 @@ public class MainGame2 extends Activity {
         bundleb.putInt("carbon",base.getCarbon());
         bundleb.putInt("hydrogen",base.getHydrogen());
         bundleb.putInt("energy",base.getEnergy());
-        mes.setData(bundleb);
+        mesb.setData(bundleb);
         baseHandler.sendMessage(mesb);
         ////////////
     }
