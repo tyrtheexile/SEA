@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button startGame = (Button) this.findViewById(R.id.StartGame);
+        if (new File(getFilesDir()+"/astroOut.bin").exists())
+            startGame.setText("Continue");
         startGame.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v){
                 Intent i = new Intent(MainActivity.this, MainGame2.class);
