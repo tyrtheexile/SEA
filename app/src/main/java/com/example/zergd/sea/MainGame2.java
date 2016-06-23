@@ -85,6 +85,7 @@ public class MainGame2 extends Activity {
         multiChoiceFrag mChoice = new multiChoiceFrag();
         fragManager.beginTransaction().add(R.id.mainFrame, mChoice).commit();
         fragManager.beginTransaction().show(mChoice).commit();
+        fragManager.beginTransaction().hide(mChoice).commit();
 
 
         Thread mainGame = new Thread(mainGameLoop);

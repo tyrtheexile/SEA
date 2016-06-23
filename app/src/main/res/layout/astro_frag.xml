@@ -36,6 +36,9 @@
         android:id="@+id/waterText"
         android:editable="false"
         android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
         android:textIsSelectable="false" />
 
     <ImageView
@@ -52,5 +55,8 @@
         android:id="@+id/foodText"
         android:editable="false"
         android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
         android:textIsSelectable="false" />
 </LinearLayout>

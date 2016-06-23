@@ -32,8 +32,8 @@ public class ActionSynthesize extends Action {
 		Boolean buy=false;
 		do
 		{
-			displayMenu();
-			int choice = Choice.getInput();
+			int choice = displayMenu();
+			//int choice = Choice.getInput();
 			if (choice==0) {
 				setTime(1);
 				break;
@@ -53,7 +53,7 @@ public class ActionSynthesize extends Action {
 		} while (buy==false);
 	}
 	
-	public void displayMenu() 
+	public int displayMenu()
 	{
 		
 		buyableItems=generateBuyList(freeItems);
@@ -67,6 +67,7 @@ public class ActionSynthesize extends Action {
 			Global.TextDisp((counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
 			if (counter>6) break;
 		}
+		return 1;
 	}
 	
 	public Boolean buyItem(Item item)

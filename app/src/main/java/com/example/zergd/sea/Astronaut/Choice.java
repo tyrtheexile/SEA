@@ -56,10 +56,7 @@ public class Choice implements java.io.Serializable{
 	}
 
 	/////// Place holder for all the bad inputs
-	public static int getInput()
-	{
-		return 1;
-	}
+	//public static int getInput() {return 1;}
 
 	/*
 	public static char getCharInput()
