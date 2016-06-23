@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 
-public class InitItemArray {
+public class InitItemArray implements java.io.Serializable{
 	
 	public InitItemArray() {
 		

@@ -3,7 +3,7 @@ package com.example.zergd.sea.Building;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Global;
 
-public class BaseHub extends Building {
+public class BaseHub extends Building implements java.io.Serializable{
 
 	public BaseHub(Astronaut astro, MainBase base,int xPos,int yPos) {
 		super(astro, base);

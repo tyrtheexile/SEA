@@ -6,7 +6,7 @@ import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
 
-public class ItemOps {
+public class ItemOps implements java.io.Serializable{
 	Astronaut astro;
 	MainBase base;
 	private ArrayList<Item> freeItems;

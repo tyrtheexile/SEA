@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.example.zergd.sea.Building.MainBase;
 
-public class HistoricalData {
+public class HistoricalData implements java.io.Serializable {
 	
 	private int accuracy=10;
 	Astronaut astro;

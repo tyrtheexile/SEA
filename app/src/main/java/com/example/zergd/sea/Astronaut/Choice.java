@@ -14,7 +14,7 @@ import com.example.zergd.sea.Building.*;
 import com.example.zergd.sea.Global;
 import com.example.zergd.sea.R;
 
-public class Choice {
+public class Choice implements java.io.Serializable{
 	
 	private Astronaut astro;
 	private MainBase base;

@@ -2,7 +2,7 @@ package com.example.zergd.sea.Actions;
 
 import com.example.zergd.sea.Astronaut.Astronaut;
 
-public abstract class Action {
+public abstract class Action implements java.io.Serializable{
 	
 	private int time=10;
 	protected Astronaut astro;

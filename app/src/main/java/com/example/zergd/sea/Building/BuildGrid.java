@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Global;
 
-public class BuildGrid {
+public class BuildGrid implements java.io.Serializable{
 	private Astronaut astro;
 	private MainBase base;
 	private int size=25;
