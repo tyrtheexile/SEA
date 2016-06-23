@@ -116,6 +116,7 @@ public class ActionSynthesize extends Action {
         frg.setData(frgb);
         multiHandler.sendMessage(frg);
 
+        Global.log("Before Return");
         return multiChoiceFrag.choice;
 	}
 	
