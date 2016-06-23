@@ -81,6 +81,14 @@ public class MainGame2 extends Activity {
         return showHideMainFrag;
     }
 
+    public Handler clearTextHandler = new Handler() {
+        @Override
+        public void handleMessage (Message msg)
+        {
+            clearMainText();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -113,7 +121,7 @@ public class MainGame2 extends Activity {
             ///Main game loop here
             try {
                 while(true) {
-                    clearMainText();
+                    clearTextHandler.sendMessage(new Message());
                     Thread.sleep(Global.getTimeIncrement());
                     gTimer.StartGame();
                     updateUI();

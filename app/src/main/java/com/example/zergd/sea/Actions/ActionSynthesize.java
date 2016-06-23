@@ -101,7 +101,6 @@ public class ActionSynthesize extends Action {
         while (Choice.getInput()==10)
 		{
             try {
-                Global.log("Before the Sleep insdie While");
                Thread.sleep(100);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
