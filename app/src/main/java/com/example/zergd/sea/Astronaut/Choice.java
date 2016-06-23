@@ -13,6 +13,7 @@ import com.example.zergd.sea.Actions.*;
 import com.example.zergd.sea.Building.*;
 import com.example.zergd.sea.Global;
 import com.example.zergd.sea.R;
+import com.example.zergd.sea.multiChoiceFrag;
 
 public class Choice implements java.io.Serializable{
 	
@@ -56,7 +57,14 @@ public class Choice implements java.io.Serializable{
 	}
 
 	/////// Place holder for all the bad inputs
-	//public static int getInput() {return 1;}
+	public static int getInput()
+	{
+        if (multiChoiceFrag.choiceFlag) {
+            multiChoiceFrag.choiceFlag=false;
+            return multiChoiceFrag.choice;
+        }
+        return 10;
+	}
 
 	/*
 	public static char getCharInput()

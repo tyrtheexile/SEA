@@ -1,5 +1,8 @@
 package com.example.zergd.sea.Actions;
 
+import android.os.Bundle;
+import android.os.Message;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,6 +11,7 @@ import com.example.zergd.sea.Astronaut.Choice;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Items.*;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.multiChoiceFrag;
 
 public class ActionSynthesize extends Action {
 	
@@ -57,17 +61,34 @@ public class ActionSynthesize extends Action {
 	{
 		
 		buyableItems=generateBuyList(freeItems);
-		
+
+		Bundle bund = new Bundle();
 		//Display each item in the buy-able array
 		Global.TextDisp("\nYou Can Build:  (Alloy,Carbon,Hydrogen)");
 		Global.TextDisp("0. Cancel");
 		int counter=1;
 		for(Item i:buyableItems)
 		{
-			Global.TextDisp((counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
+			bund.putString("but"+counter,(counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
 			if (counter>6) break;
 		}
-		return 1;
+		for (int i=7;i>counter;i--)
+		{
+			bund.putString("but"+i,"-------");
+		}
+        Message msg = new Message();
+        msg.setData(bund);
+        multiChoiceFrag.getHandler().sendMessage(msg);
+        while (Choice.getInput()!=10)
+		{
+            try {
+               Thread.sleep(100);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+		}
+        return multiChoiceFrag.choice;
 	}
 	
 	public Boolean buyItem(Item item)

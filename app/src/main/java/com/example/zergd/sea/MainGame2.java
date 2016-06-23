@@ -82,10 +82,7 @@ public class MainGame2 extends Activity {
 
         loadInFragments();
 
-        multiChoiceFrag mChoice = new multiChoiceFrag();
-        fragManager.beginTransaction().add(R.id.mainFrame, mChoice).commit();
-        fragManager.beginTransaction().show(mChoice).commit();
-        fragManager.beginTransaction().hide(mChoice).commit();
+
 
 
         Thread mainGame = new Thread(mainGameLoop);
@@ -191,7 +188,12 @@ public class MainGame2 extends Activity {
     }
 
     private void loadInFragments() {
+
         fragManager = getFragmentManager();
+        multiChoiceFrag mChoice = new multiChoiceFrag();
+        //mChoice.addHandler(Handler astro.getChoice().getHandler());
+        fragManager.beginTransaction().add(R.id.mainFrame, mChoice).commit();
+        fragManager.beginTransaction().hide(mChoice).commit();
     }
 
     private void updateUI(){
