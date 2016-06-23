@@ -102,11 +102,6 @@ public class MainGame2 extends Activity {
         Global.setHandler(buttonNames,buttonPress,textUpdate);
         Global.setActivity(this);
 
-        Global.set_Debug(6);
-        Global.setImmortal(true);
-        Global.setTimeIncrement(1000);
-        Global.setBasesize(10);
-        Global.setTestmode(2);
         buttonOps = new ButtonOps(this);
         buttonOps.setOnClickListners();
 

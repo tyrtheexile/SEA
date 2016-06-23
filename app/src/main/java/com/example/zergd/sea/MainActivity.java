@@ -14,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Global.set_Debug(6);
+        Global.setImmortal(false);
+        Global.setTimeIncrement(10000);
+        Global.setBasesize(5);
+        Global.setTestmode(1);
+
         Button startGame = (Button) this.findViewById(R.id.StartGame);
         if (new File(getFilesDir()+"/astroOut.bin").exists())
             startGame.setText("Continue");
