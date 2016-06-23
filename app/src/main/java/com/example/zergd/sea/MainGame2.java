@@ -141,7 +141,7 @@ public class MainGame2 extends Activity {
         else {
             this.astro = new Astronaut("Chris");
             this.base = new MainBase("Alpha", astro);
-        }
+    }
     }
 
     protected void loadGTimer()
@@ -156,13 +156,16 @@ public class MainGame2 extends Activity {
         //Save Astro
         try
         {
+            /*
             Log.e("test","File......");
             File file=new File("astroOut.bin");
             if(!file.exists()) {
+                Log.e("test","In if");
                 file.createNewFile();
             }
+            */
             Log.e("test","File Output Stream");
-            FileOutputStream fop = new FileOutputStream(file);
+            FileOutputStream fop = new FileOutputStream("astroOut.bin");
             Log.e("test","Object Output Stream");
             ObjectOutputStream astroOut = new ObjectOutputStream(fop);
             //ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
