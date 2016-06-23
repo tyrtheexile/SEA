@@ -121,8 +121,8 @@ public class MainGame2 extends Activity {
             ///Main game loop here
             try {
                 while(true) {
-                    clearTextHandler.sendMessage(new Message());
                     Thread.sleep(Global.getTimeIncrement());
+                    clearTextHandler.sendMessage(new Message());
                     gTimer.StartGame();
                     updateUI();
                 }
