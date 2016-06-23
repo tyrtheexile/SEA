@@ -27,7 +27,9 @@ public class MainGame2 extends Activity {
     private GameTimer gTimer;
 
     private ButtonOps buttonOps;
-    private FragmentManager fragManager;
+    protected FragmentManager fragManager;
+
+    multiChoiceFrag mChoice;
 
     //This Handler sets the Button names inside the UI thread
     public Handler buttonNames = new Handler() {
@@ -59,6 +61,23 @@ public class MainGame2 extends Activity {
         }
     };
 
+    public Handler showHideMainFrag = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            Bundle bund = msg.getData();
+            int hide = bund.getInt("hide");
+            if (hide==0)
+                fragManager.beginTransaction().hide(mChoice).commit();
+            else
+                fragManager.beginTransaction().show(mChoice).commit();
+        }
+    };
+
+    public Handler getMainFragHandler()
+    {
+        return showHideMainFrag;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -81,9 +100,6 @@ public class MainGame2 extends Activity {
         buttonOps.setOnClickListners();
 
         loadInFragments();
-
-
-
 
         Thread mainGame = new Thread(mainGameLoop);
         mainGame.start();
@@ -190,7 +206,7 @@ public class MainGame2 extends Activity {
     private void loadInFragments() {
 
         fragManager = getFragmentManager();
-        multiChoiceFrag mChoice = new multiChoiceFrag();
+        mChoice = new multiChoiceFrag();
         //mChoice.addHandler(Handler astro.getChoice().getHandler());
         fragManager.beginTransaction().add(R.id.mainFrame, mChoice).commit();
         fragManager.beginTransaction().hide(mChoice).commit();

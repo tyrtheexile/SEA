@@ -1,6 +1,7 @@
 package com.example.zergd.sea.Actions;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
 
 import java.util.ArrayList;
@@ -21,6 +22,13 @@ public class ActionSynthesize extends Action {
 	ArrayList<Item> buyableItems;
 	
 	private static int newTime=12;
+
+    private static Handler multiHandler;
+
+    public static void setHandler(Handler h)
+    {
+        multiHandler=h;
+    }
 	
 	public ActionSynthesize(Astronaut astro, MainBase base) {
 		super(astro);
@@ -76,9 +84,17 @@ public class ActionSynthesize extends Action {
 		{
 			bund.putString("but"+i,"-------");
 		}
+
+        Message frag = new Message();
+        Bundle fragb = new Bundle();
+        fragb.putInt("hide",1);
+        frag.setData(fragb);
+        multiHandler.sendMessage(frag);
+
         Message msg = new Message();
         msg.setData(bund);
         multiChoiceFrag.getHandler().sendMessage(msg);
+
         while (Choice.getInput()!=10)
 		{
             try {
@@ -88,6 +104,13 @@ public class ActionSynthesize extends Action {
                 e.printStackTrace();
             }
 		}
+
+        Message frg = new Message();
+        Bundle frgb = new Bundle();
+        frgb.putInt("hide",0);
+        frg.setData(frgb);
+        multiHandler.sendMessage(frg);
+
         return multiChoiceFrag.choice;
 	}
 	
