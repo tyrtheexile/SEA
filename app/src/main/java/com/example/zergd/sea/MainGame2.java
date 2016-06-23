@@ -116,9 +116,9 @@ public class MainGame2 extends Activity {
 
     protected void loadSave()
     {
-        File asF = new File(getFilesDir()+"astroOut.bin");
-        Log.e("Test",getFilesDir()+"astroOut.bin");
-        File bsF = new File(getFilesDir()+"baseOut.bin");
+        File asF = new File(getFilesDir()+"/astroOut.bin");
+        Log.e("Test",getFilesDir()+"/astroOut.bin");
+        File bsF = new File(getFilesDir()+"/baseOut.bin");
         if(asF.exists() && bsF.exists()) {
             Log.e("test","inside if2.00000000000");
             try
