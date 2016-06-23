@@ -118,7 +118,7 @@ public class MainGame2 extends Activity {
     {
         File asF = new File("astroOut.bin");
         File bsF = new File("baseOut.bin");
-        if(asF.exists() && bsF.exists()) {
+        if(true){//asF.exists() && bsF.exists()) {
             Log.e("test","inside if2.00000000000");
             try
             {
