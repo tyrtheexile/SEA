@@ -158,6 +158,9 @@ public class MainGame2 extends Activity {
         {
             Log.e("test","File......");
             File file=new File("astroOut.bin");
+            if(!file.exists()) {
+                file.createNewFile();
+            }
             Log.e("test","File Output Stream");
             FileOutputStream fop = new FileOutputStream(file);
             Log.e("test","Object Output Stream");
