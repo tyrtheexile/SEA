@@ -119,23 +119,30 @@ public class MainGame2 extends Activity {
         File asF = new File("astroOut.bin");
         File bsF = new File("baseOut.bin");
         if(asF.exists() && bsF.exists()) {
+            Log.e("test","inside if2.00000000000");
             try
             {
-                ObjectInputStream aIn = new ObjectInputStream(new FileInputStream(new File("astroOut.bin")));
+                FileInputStream fop = openFileInput("astroOut.bin");
+                ObjectInputStream aIn = new ObjectInputStream(fop);
+                //ObjectInputStream aIn = new ObjectInputStream(new FileInputStream(new File("astroOut.bin")));
                 astro = (Astronaut)aIn.readObject();
             }
             catch(Exception ex)
             {
                 ex.printStackTrace();
+                Log.e("Test",Log.getStackTraceString(ex));
             }
             try
             {
-                ObjectInputStream bIn = new ObjectInputStream(new FileInputStream(new File("baseOut.bin")));
+                FileInputStream fop2 = openFileInput("baseOut.bin");
+                ObjectInputStream bIn = new ObjectInputStream(fop2);
+                //ObjectInputStream bIn = new ObjectInputStream(new FileInputStream(new File("baseOut.bin")));
                 base = (MainBase)bIn.readObject();
             }
             catch(Exception ex)
             {
                 ex.printStackTrace();
+                Log.e("Test",Log.getStackTraceString(ex));
             }
 
         }
@@ -157,41 +164,23 @@ public class MainGame2 extends Activity {
         //Save Astro
         try
         {
-            /*
-            Log.e("test","File......");
-            File file=new File("astroOut.bin");
-            if(!file.exists()) {
-                Log.e("test","In if");
-                file.createNewFile();
-            }
-            */
-            Log.e("test","File Output Stream");
             FileOutputStream fop = openFileOutput("astroOut.bin", Context.MODE_PRIVATE);
-
-            //FileOutputStream fop = new FileOutputStream("astroOut.bin");
-            Log.e("test","Object Output Stream");
             ObjectOutputStream astroOut = new ObjectOutputStream(fop);
-            //ObjectOutputStream astroOut = new ObjectOutputStream(new FileOutputStream(new File("astroOut.bin"))); //Select where you wish to save the file...
-            Log.e("test","1111111111111111111");
             astroOut.writeObject(this.astro); // write the class as an 'object'
-            Log.e("test","2222222222222222222222");
             astroOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
-            Log.e("test","33333333333333333333333");
             astroOut.close();// close the stream
-            Log.e("test","44444444444444444444444");
-            Log.e("SAE I/O Knp","System Write failed");
         }
         catch(Exception ex)
         {
             ex.printStackTrace();
             Log.e("Test",Log.getStackTraceString(ex));
-            Log.e("SAE I/O Knp","System Write failed");
         }
 
         //Save mainBase
         try
         {
-            ObjectOutputStream baseOut = new ObjectOutputStream(new FileOutputStream(new File("baseOut.bin"))); //Select where you wish to save the file...
+            FileOutputStream fop2 = openFileOutput("baseOut.bin", Context.MODE_PRIVATE);
+            ObjectOutputStream baseOut = new ObjectOutputStream(fop2);
             baseOut.writeObject(this.base); // write the class as an 'object'
             baseOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
             baseOut.close();// close the stream
@@ -199,6 +188,7 @@ public class MainGame2 extends Activity {
         catch(Exception ex)
         {
             ex.printStackTrace();
+            Log.e("Test",Log.getStackTraceString(ex));
         }
     }
 
