@@ -24,7 +24,13 @@ public class GameTimer implements java.io.Serializable {
 		this.astro=astro;
 		this.base=base;
 	}
-	
+
+    public void setGameTimer(Astronaut astro,MainBase base)
+    {
+        this.astro=astro;
+        this.base=base;
+    }
+
 	//Starts the Actual game-play loop
 	public void StartGame() 
 	{
