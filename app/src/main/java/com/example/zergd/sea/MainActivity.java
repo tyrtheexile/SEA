@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Global.set_Debug(6);
+        Global.set_Debug(1);
         Global.setImmortal(false);
         Global.setTimeIncrement(1000);
         Global.setBasesize(5);
