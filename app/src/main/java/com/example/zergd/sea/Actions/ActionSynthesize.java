@@ -64,6 +64,8 @@ public class ActionSynthesize extends Action {
 			else
 				Global.TextDisp("\nCannot Affor that Item");			
 		} while (buy==false);
+        // TODO Double check this gets rid of the weird choice exit
+        multiChoiceFrag.choice=10;
 	}
 	
 	public int displayMenu()
@@ -78,7 +80,7 @@ public class ActionSynthesize extends Action {
 		int counter=1;
 		for(Item i:buyableItems)
 		{
-            Global.log("butOff"+counter+"  "+base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
+            //Global.log("butOff"+counter+"  "+base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
 			bund.putString("but"+counter,(counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
             bund.putBoolean("butOff"+counter,base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
 			if (counter>6) break;
@@ -87,7 +89,7 @@ public class ActionSynthesize extends Action {
 		{
 			bund.putString("but"+i,"-------");
             bund.putBoolean("butOff"+counter,false);
-            Global.log("butOff"+i + "false");
+            //Global.log("butOff"+i + "false");
 		}
 
         Global.log("First Hide message Starting");
