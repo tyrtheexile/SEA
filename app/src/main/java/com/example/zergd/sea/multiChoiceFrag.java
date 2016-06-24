@@ -68,6 +68,12 @@ public class multiChoiceFrag extends Fragment {
             but4b.setAlpha(.85f);
             but5b.setAlpha(.85f);
             but6b.setAlpha(.85f);
+            but1b.setEnabled(true);
+            but2b.setEnabled(true);
+            but3b.setEnabled(true);
+            but4b.setEnabled(true);
+            but5b.setEnabled(true);
+            but6b.setEnabled(true);
             if (!butOff2) {
                 but2b.setEnabled(butOff2);
                 but2b.setAlpha(.5f);
