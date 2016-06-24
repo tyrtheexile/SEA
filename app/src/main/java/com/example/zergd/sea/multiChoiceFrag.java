@@ -63,34 +63,34 @@ public class multiChoiceFrag extends Fragment {
             but4b = (Button) view.findViewById(R.id.button4);
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
-            but1b.setAlpha(1f);
-            but2b.setAlpha(.1f);
-            //but3b.setAlpha(1f);
-            but4b.setAlpha(1f);
-            but5b.setAlpha(.1f);
-            but6b.setAlpha(.1f);
+            but1b.setAlpha(.85f);
+            but2b.setAlpha(.85f);
+            but3b.setAlpha(.85f);
+            but4b.setAlpha(.85f);
+            but5b.setAlpha(.85f);
+            but6b.setAlpha(.85f);
             if (!butOff1) {
-                but1b.setClickable(butOff1);
-                //but1b.setAlpha(.5f);
+                but1b.setEnabled(butOff1);
+                but1b.setAlpha(.5f);
             }
             if (!butOff2) {
-                but2b.setClickable(butOff2);
-                //but2b.setAlpha(.5f);
+                but2b.setEnabled(butOff2);
+                but2b.setAlpha(.5f);
             }
             if (!butOff3) {
-                but3b.setClickable(butOff3);
-                //but3b.setAlpha(.5f);
+                but3b.setEnabled(butOff3);
+                but3b.setAlpha(.5f);
             }
             if (!butOff4) {
-                but4b.setClickable(butOff4);
+                but4b.setEnabled(butOff4);
                 but4b.setAlpha(.5f);
             }
             if (!butOff5) {
-                but5b.setClickable(butOff5);
+                but5b.setEnabled(butOff5);
                 but5b.setAlpha(.5f);
             }
             if (!butOff6) {
-                but6b.setClickable(butOff6);
+                but6b.setEnabled(butOff6);
                 but6b.setAlpha(.5f);
             }
             but1b.setText(but1);

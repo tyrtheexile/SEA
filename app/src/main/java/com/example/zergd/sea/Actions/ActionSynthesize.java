@@ -82,7 +82,7 @@ public class ActionSynthesize extends Action {
             bund.putBoolean("butOff"+counter,base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
 			if (counter>6) break;
 		}
-		for (int i=7;i>counter;i--)
+		for (int i=7;i>=counter;i--)
 		{
 			bund.putString("but"+i,"-------");
             bund.putBoolean("butOff"+counter,false);

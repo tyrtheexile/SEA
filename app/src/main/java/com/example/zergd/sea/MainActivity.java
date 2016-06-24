@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (new File(getFilesDir()+"/astroOut.bin").exists()) {
             startGame.setText("Continue");
+        }else{
             newGame.setAlpha(.5f);
             newGame.setClickable(false);
             newGame.setEnabled(false);
