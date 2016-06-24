@@ -167,6 +167,8 @@ public class Global implements java.io.Serializable {
     public static String make3digit(int num){
         String str=num+"";
         float flt=(float) num;
+        if (num<1000)
+            return str;
 
         NumberFormat number = NumberFormat.getNumberInstance();
         number.setMaximumFractionDigits(1);
