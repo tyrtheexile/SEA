@@ -20,6 +20,7 @@ public class multiChoiceFrag extends Fragment {
     private static Button but4b;
     private static Button but5b;
     private static Button but6b;
+    private static Button cancel;
 
     public static int choice =10;
     public static Boolean choiceFlag=false;
@@ -36,6 +37,7 @@ public class multiChoiceFrag extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.multi_choice_frag, container, false);
         Button but = (Button) view.findViewById(R.id.button1);
+        cancel = (Button) view.findViewById(R.id.multiCancel);
         return view;
     }
 
@@ -67,12 +69,17 @@ public class multiChoiceFrag extends Fragment {
             but4b.setAlpha(.85f);
             but5b.setAlpha(.85f);
             but6b.setAlpha(.85f);
+            cancel.setAlpha(.85f);
             but1b.setEnabled(true);
             but2b.setEnabled(true);
             but3b.setEnabled(true);
             but4b.setEnabled(true);
             but5b.setEnabled(true);
             but6b.setEnabled(true);
+            if (butOff1==false) {
+                but1b.setEnabled(false);
+                but1b.setAlpha(.5f);
+            }
             if (butOff2==false) {
                 but2b.setEnabled(false);
                 but2b.setAlpha(.5f);
@@ -139,6 +146,13 @@ public class multiChoiceFrag extends Fragment {
                 @Override
                 public void onClick(View v) {
                     choice=6;
+                    multiChoiceFrag.sendAns();
+                }
+            });
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice=7;
                     multiChoiceFrag.sendAns();
                 }
             });
