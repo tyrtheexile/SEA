@@ -31,7 +31,7 @@ public class MainGame extends AppCompatActivity {
 		Global.set_Debug(6);
 		Global.setImmortal(true);
 		Global.setTimeIncrement(1000);
-		Global.setBasesize(10);
+
 		Global.setTestmode(2);
         
         Thread gameThread = new Thread(tGame);
