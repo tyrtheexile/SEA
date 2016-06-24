@@ -9,7 +9,7 @@
         android:id="@+id/airImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:background="@drawable/air"/>
+        android:background="@drawable/air" />
 
     <EditText
         android:layout_width="match_parent"
