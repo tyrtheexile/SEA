@@ -8,6 +8,7 @@ import android.widget.*;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import android.os.*;
 
@@ -167,22 +168,28 @@ public class Global implements java.io.Serializable {
         String str=num+"";
         float flt=(float) num;
 
+        NumberFormat number = NumberFormat.getNumberInstance();
+        number.setMaximumFractionDigits(1);
+
         float thousand = flt/1000;
         if(thousand<1000)
         {
-            str=thousand+"k";
+            String snum = number.format(thousand);
+            str=snum+"k";
             return str;
         }
         float million = thousand/1000;
         if(million<1000)
         {
-            str=million+"m";
+            String snum = number.format(million);
+            str=snum+"m";
             return str;
         }
         float billion = million/1000;
         if(billion<1000)
         {
-            str=billion+"m";
+            String snum = number.format(billion);
+            str=snum+"b";
             return str;
         }
 

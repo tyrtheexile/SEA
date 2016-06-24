@@ -50,6 +50,7 @@ public class GameTimer implements java.io.Serializable {
         Global.TextDisp(Global.make3digit(12345));
         Global.TextDisp(Global.make3digit(1234567));
         Global.TextDisp(Global.make3digit(12345678));
+        Global.TextDisp(Global.make3digit(1234567845));
 
         //Set Progress bar
         Message msg = new Message();
