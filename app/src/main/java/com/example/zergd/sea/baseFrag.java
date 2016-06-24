@@ -25,13 +25,13 @@ public class baseFrag extends Fragment {
     public void updateBase(int alloy,int carbon,int hydrogen,int energy)
     {
         TextView alloyT = (TextView) view.findViewById(R.id.alloyText);
-        alloyT.setText(alloy+"");
+        alloyT.setText(Global.make3digit(alloy)+"");
         TextView carbonT = (TextView) view.findViewById(R.id.carbonText);
-        carbonT.setText(carbon+"");
+        carbonT.setText(Global.make3digit(carbon)+"");
         TextView hydrogenT = (TextView) view.findViewById(R.id.hydrogenText);
-        hydrogenT.setText(hydrogen+"");
+        hydrogenT.setText(Global.make3digit(hydrogen)+"");
         TextView energyT = (TextView) view.findViewById(R.id.energyText);
-        energyT.setText(energy+"");
+        energyT.setText(Global.make3digit(energy)+"");
     }
 
     //Update handler

@@ -26,14 +26,20 @@ public class astroFrag extends Fragment {
         return view;
     }
 
-    public void updateAstro(int air, int water, int food)
+    public void updateAstro(int air, int water, int food,int airM,int waterM,int foodM)
     {
         TextView airT = (TextView) view.findViewById(R.id.airText);
-        airT.setText(air+"");
+        airT.setText(Global.make3digit(air)+"");
         TextView waterT = (TextView) view.findViewById(R.id.waterText);
-        waterT.setText(water+"");
+        waterT.setText(Global.make3digit(water)+"");
         TextView foodT = (TextView) view.findViewById(R.id.foodText);
-        foodT.setText(food+"");
+        foodT.setText(Global.make3digit(food)+"");
+        TextView airMT = (TextView) view.findViewById(R.id.airText);
+        airMT.setText(Global.make3digit(airM)+"");
+        TextView waterMT = (TextView) view.findViewById(R.id.waterText);
+        waterMT.setText(Global.make3digit(waterM)+"");
+        TextView foodMT = (TextView) view.findViewById(R.id.foodText);
+        foodMT.setText(Global.make3digit(foodM)+"");
     }
 
     //Update handler
@@ -44,7 +50,10 @@ public class astroFrag extends Fragment {
             int air= bundle.getInt("air");
             int water= bundle.getInt("water");
             int food= bundle.getInt("food");
-            updateAstro(air,water,food);
+            int airM=bundle.getInt("airM");
+            int waterM=bundle.getInt("waterM");
+            int foodM=bundle.getInt("foodM");
+            updateAstro(air,water,food,airM,waterM,foodM);
         }
     };
 

@@ -21,7 +21,21 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="10sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/airMaxText"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="10sp" />
 
     <ImageView
         android:layout_width="43dp"
@@ -41,7 +55,21 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="10sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/waterMaxText"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="10sp" />
 
     <ImageView
         android:layout_width="43dp"
@@ -61,5 +89,19 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="10sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodMaxText"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="10sp" />
 </LinearLayout>

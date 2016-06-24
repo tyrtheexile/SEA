@@ -268,6 +268,9 @@ public class MainGame2 extends Activity {
         bundle.putInt("air",astro.getAir());
         bundle.putInt("water",astro.getWater());
         bundle.putInt("food",astro.getFood());
+        bundle.putInt("airM",astro.getAirMax());
+        bundle.putInt("waterM",astro.getWaterMax());
+        bundle.putInt("foodM",astro.getFoodMax());
         mes.setData(bundle);
         astroHandler.sendMessage(mes);
         ///////////

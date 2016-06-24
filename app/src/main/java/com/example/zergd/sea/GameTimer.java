@@ -7,6 +7,7 @@ import com.example.zergd.sea.Astronaut.*;
 import com.example.zergd.sea.Building.*;
 
 import java.io.File;
+import java.sql.Time;
 
 public class GameTimer implements java.io.Serializable {
 	
@@ -46,11 +47,6 @@ public class GameTimer implements java.io.Serializable {
 		TurnCount++;
 		actionTimer--;
 		Global.DebugMSG(5, "Action Timer Countdown: "+actionTimer);
-
-        Global.TextDisp(Global.make3digit(12345));
-        Global.TextDisp(Global.make3digit(1234567));
-        Global.TextDisp(Global.make3digit(12345678));
-        Global.TextDisp(Global.make3digit(1234567845));
 
         //Set Progress bar
         Message msg = new Message();
