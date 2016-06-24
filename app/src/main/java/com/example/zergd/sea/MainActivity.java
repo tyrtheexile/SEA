@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         Global.set_Debug(1);
         Global.setImmortal(false);
-        Global.setTimeIncrement(100);
+        Global.setTimeIncrement(1700);
         Global.setTestmode(1);
 
         Button startGame = (Button) this.findViewById(R.id.StartGame);
