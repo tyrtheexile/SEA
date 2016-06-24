@@ -10,6 +10,7 @@ public class GameTimer implements java.io.Serializable {
 	
 	private Boolean endGameHard=false;
 	private int actionTimer=10;
+    private int actionMax=10;
 	
 	private Astronaut astro;
 	private MainBase base;
@@ -76,7 +77,7 @@ public class GameTimer implements java.io.Serializable {
             Bundle bund2 = new Bundle();
             bund2.putInt("progress",0);
             bund2.putInt("max",actionTimer);
-            msg2.setData(bund);
+            msg2.setData(bund2);
             Global.getHandler("progress").sendMessage(msg2);
 		}
 

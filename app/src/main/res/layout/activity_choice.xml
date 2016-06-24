@@ -46,7 +46,7 @@
         android:layout_alignWithParentIfMissing="false"
         android:layout_alignParentStart="false"
         android:layout_alignParentTop="true"
-        android:progress="25"
+        android:progress="11"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="10dp"
         android:clickable="false"
@@ -54,7 +54,8 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:indeterminate="false"
-        android:progressTint="@color/Progress" />
+        android:progressTint="@color/Progress"
+        android:max="12" />
 
     <FrameLayout
         android:layout_width="match_parent"
