@@ -63,6 +63,7 @@ public class multiChoiceFrag extends Fragment {
             but4b = (Button) view.findViewById(R.id.button4);
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
+            Global.log("String: "+but1+"    off:"+ butOff1);
             but1b.setAlpha(.85f);
             but2b.setAlpha(.85f);
             but3b.setAlpha(.85f);
