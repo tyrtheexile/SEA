@@ -23,7 +23,7 @@ public class multiChoiceFrag extends Fragment {
     private static Button but5b;
     private static Button but6b;
 
-    public static int choice =0;
+    public static int choice =10;
     public static Boolean choiceFlag=false;
 
     static Handler choiceHandler;

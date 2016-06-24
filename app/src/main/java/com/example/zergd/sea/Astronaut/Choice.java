@@ -19,9 +19,8 @@ public class Choice implements java.io.Serializable{
 	
 	private Astronaut astro;
 	private MainBase base;
-    private static int choice;
+    private static int choice=10;
     private static Boolean choiceFlag;
-	//public static Scanner inputStream = new Scanner(System.in);
 	
 	Action act1=null;
 	Action act2=null;
