@@ -3,7 +3,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/SpaceBackground">
+        android:background="@drawable/Background">
 
         <Button
             android:layout_width="fill_parent"
@@ -16,7 +16,9 @@
             android:layout_toStartOf="@+id/space"
             android:layout_toLeftOf="@+id/space"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="15dp" />
+            android:layout_marginBottom="15dp"
+            android:background="@color/SpaceButtonColor"
+            android:textColor="@color/SpaceButtonText" />
 
         <Button
             android:layout_width="fill_parent"
@@ -29,7 +31,9 @@
             android:layout_toEndOf="@+id/space"
             android:layout_toRightOf="@+id/space"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="15dp" />
+            android:layout_marginBottom="15dp"
+            android:background="@color/SpaceButtonColor"
+            android:textColor="@color/SpaceButtonText" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"

@@ -36,6 +36,8 @@ public class Global implements java.io.Serializable {
 
     public static int choice=0;
     public static Boolean choiceFlag=false;
+
+    public static Boolean newGame=false;
 	
 	//Testmode is used to implement different starting setupds
 	//Testmode 1-default start

@@ -17,4 +17,13 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart Game"
+        android:id="@+id/newGame"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/StartGame"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

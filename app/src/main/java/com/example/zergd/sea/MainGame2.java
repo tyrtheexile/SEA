@@ -152,7 +152,7 @@ public class MainGame2 extends Activity {
         File asF = new File(getFilesDir()+"/astroOut.bin");
         //Log.e("Test",getFilesDir()+"/astroOut.bin");
         File bsF = new File(getFilesDir()+"/baseOut.bin");
-        if(asF.exists() && bsF.exists()) {
+        if(asF.exists() && bsF.exists() && !Global.newGame) {
             //Log.e("test","inside if2.00000000000");
             try
             {

@@ -22,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         Global.setTestmode(1);
 
         Button startGame = (Button) this.findViewById(R.id.StartGame);
-        if (new File(getFilesDir()+"/astroOut.bin").exists())
+        Button newGame = (Button) this.findViewById(R.id.newGame);
+
+        if (new File(getFilesDir()+"/astroOut.bin").exists()) {
             startGame.setText("Continue");
+            newGame.setAlpha(.5f);
+            newGame.setClickable(false);
+        }
         startGame.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v){
                 Intent i = new Intent(MainActivity.this, MainGame2.class);
@@ -31,5 +36,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         );
+        newGame.setOnClickListener(new View.OnClickListener() {
+               public void onClick(View v) {
+                   Global.newGame=true;
+                   Intent i = new Intent(MainActivity.this, MainGame2.class);
+                   startActivity(i);
+               }
+           }
+            );
     }
 }
