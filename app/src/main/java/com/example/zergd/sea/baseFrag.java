@@ -34,13 +34,13 @@ public class baseFrag extends Fragment {
         energyT.setText(Global.make3digit(energy)+"");
 
         TextView alloyTM = (TextView) view.findViewById(R.id.alloyMaxText);
-        alloyT.setText(Global.make3digit(alloyM)+"");
+        alloyTM.setText("/ "+Global.make3digit(alloyM)+"");
         TextView carbonTM = (TextView) view.findViewById(R.id.carbonMaxTest);
-        carbonTM.setText(Global.make3digit(carbonM)+"");
+        carbonTM.setText("/ "+Global.make3digit(carbonM)+"");
         TextView hydrogenTM = (TextView) view.findViewById(R.id.hydrogenMaxText);
-        hydrogenTM.setText(Global.make3digit(hydrogenM)+"");
+        hydrogenTM.setText("/ "+Global.make3digit(hydrogenM)+"");
         TextView energyTM = (TextView) view.findViewById(R.id.energyMaxText);
-        energyTM.setText(Global.make3digit(energyM)+"");
+        energyTM.setText("/ "+Global.make3digit(energyM)+"");
     }
 
     //Update handler

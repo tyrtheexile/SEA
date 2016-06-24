@@ -190,7 +190,7 @@ public class MainGame2 extends Activity {
             }
             gTimer.setGameTimer(astro,base);
             //Log.e("Test","End of Load in"+astro.getName());
-            // TODO Fast Forward the Sim Somehow
+
         }
         else {
             this.astro = new Astronaut("Chris");
