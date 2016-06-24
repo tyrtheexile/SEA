@@ -31,9 +31,9 @@ public class GameTimer implements java.io.Serializable {
 
 		//Update Window
 		Global.TextDisp("\n-------------- "+TurnCount+" --------------");
-		Global.TextDisp(astro.getStatusString());
-		Global.TextDisp(base.getStatusString());
-		Global.TextDisp(base.getItems().getItemStatusString());
+		//Global.TextDisp(astro.getStatusString());
+		//Global.TextDisp(base.getStatusString());
+		Global.TextDisp(base.getItems().getItemStatusString()+"\n");
 
 		//Timer countdown
 		TurnCount++;

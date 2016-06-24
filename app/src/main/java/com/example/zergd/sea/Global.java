@@ -73,7 +73,7 @@ public class Global implements java.io.Serializable {
         Handler hand = Global.getHandler("textDisp");
         Message msg = new Message();
         Bundle bundle = new Bundle();
-        bundle.putString("text","\n-"+str);
+        bundle.putString("text","\n"+str);
         msg.setData(bundle);
         hand.sendMessage(msg);
 	}
