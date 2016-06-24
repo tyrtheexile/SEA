@@ -10,7 +10,7 @@ public class SpaceExplorer
 		Global.set_Debug(6);
 		Global.setImmortal(true);
 		Global.setTimeIncrement(1000);
-		Global.setBasesize(10);
+
 		Global.setTestmode(2);
 		
 		Astronaut chris = new Astronaut("Chris");

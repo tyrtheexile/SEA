@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+// TODO Figure out what happens when a ---- button pressed
+
 public class multiChoiceFrag extends Fragment {
 
     private static View view;
@@ -61,22 +63,22 @@ public class multiChoiceFrag extends Fragment {
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
             but1b.setAlpha(1f);
-            but2b.setAlpha(1f);
-            but3b.setAlpha(1f);
+            but2b.setAlpha(.1f);
+            //but3b.setAlpha(1f);
             but4b.setAlpha(1f);
             but5b.setAlpha(.1f);
             but6b.setAlpha(.1f);
             if (!butOff1) {
                 but1b.setClickable(butOff1);
-                but1b.setAlpha(.5f);
+                //but1b.setAlpha(.5f);
             }
             if (!butOff2) {
                 but2b.setClickable(butOff2);
-                but2b.setAlpha(.5f);
+                //but2b.setAlpha(.5f);
             }
             if (!butOff3) {
                 but3b.setClickable(butOff3);
-                but3b.setAlpha(.5f);
+                //but3b.setAlpha(.5f);
             }
             if (!butOff4) {
                 but4b.setClickable(butOff4);

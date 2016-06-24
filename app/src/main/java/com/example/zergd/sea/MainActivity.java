@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             startGame.setText("Continue");
             newGame.setAlpha(.5f);
             newGame.setClickable(false);
+            newGame.setEnabled(false);
         }
         startGame.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v){
