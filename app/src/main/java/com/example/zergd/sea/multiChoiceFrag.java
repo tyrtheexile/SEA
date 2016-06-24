@@ -48,18 +48,31 @@ public class multiChoiceFrag extends Fragment {
             String but4 = bundle.getString("but4");
             String but5 = bundle.getString("but5");
             String but6 = bundle.getString("but6");
+            Boolean butOff1 = bundle.getBoolean("but1Off");
+            Boolean butOff2 = bundle.getBoolean("but2Off");
+            Boolean butOff3 = bundle.getBoolean("but3Off");
+            Boolean butOff4 = bundle.getBoolean("but4Off");
+            Boolean butOff5 = bundle.getBoolean("but5Off");
+            Boolean butOff6 = bundle.getBoolean("but6Off");
             but1b = (Button) view.findViewById(R.id.button1);
             but2b = (Button) view.findViewById(R.id.button2);
             but3b = (Button) view.findViewById(R.id.button3);
             but4b = (Button) view.findViewById(R.id.button4);
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
+            but1b.setClickable(butOff1);
+            but2b.setClickable(butOff2);
+            but3b.setClickable(butOff3);
+            but4b.setClickable(butOff4);
+            but5b.setClickable(butOff5);
+            but6b.setClickable(butOff6);
             but1b.setText(but1);
             but2b.setText(but2);
             but3b.setText(but3);
             but4b.setText(but4);
             but5b.setText(but5);
             but6b.setText(but6);
+
             but1b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -120,6 +133,7 @@ public class multiChoiceFrag extends Fragment {
     }
 
     public void onPause(){
+        super.onPause();
         choice=7;
         multiChoiceFrag.sendAns();
     }

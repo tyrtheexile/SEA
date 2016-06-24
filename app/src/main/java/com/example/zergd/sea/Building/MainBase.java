@@ -120,9 +120,28 @@ public class MainBase implements java.io.Serializable {
 		return true;
 	}
 	
-	public Boolean validateCost(int alloyCost, int carbonCost, int hydrogenCost)
+	public Boolean validateCost(int alloyCost, int carbonCost, int hydrogenCost,int energyCost)
 	{
-		
+		if (alloyCost>getAlloy())
+		{
+			Global.TextDisp("\nAlloy cost too high");
+			return false;
+		}
+		if (carbonCost>getCarbon())
+		{
+			Global.TextDisp("\nCarbon cost too high");
+			return false;
+		}
+		if (hydrogenCost>getHydrogen())
+		{
+			Global.TextDisp("\nHydrogen cost too high");
+			return false;
+		}
+		if (energyCost>getEnergy())
+		{
+			Global.TextDisp("\nEnergy cost too high");
+			return false;
+		}
 		return true;
 	}
 	
