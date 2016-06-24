@@ -1,5 +1,8 @@
 package com.example.zergd.sea;
 
+import android.os.Bundle;
+import android.os.Message;
+
 import com.example.zergd.sea.Astronaut.*;
 import com.example.zergd.sea.Building.*;
 
@@ -36,6 +39,14 @@ public class GameTimer implements java.io.Serializable {
 		actionTimer--;
 		Global.DebugMSG(5, "Action Timer Countdown: "+actionTimer);
 
+        //Set Progress bar
+        Message msg = new Message();
+        Bundle bund = new Bundle();
+        bund.putInt("progress",actionTimer);
+        bund.putInt("max",0);
+        msg.setData(bund);
+        Global.getHandler("progress").sendMessage(msg);
+
 		//Reduce given Parameters
 		astro.timePulse();
 		base.timePulse();
@@ -58,6 +69,14 @@ public class GameTimer implements java.io.Serializable {
 			//Give choice, pause game, returns wait time
 
 			actionTimer=choice.giveChoice();
+
+            //Remax Progress bar
+            Message msg2 = new Message();
+            Bundle bund2 = new Bundle();
+            bund2.putInt("progress",0);
+            bund2.putInt("max",actionTimer);
+            msg2.setData(bund);
+            Global.getHandler("progress").sendMessage(msg2);
 		}
 
 		Global.setGameInProgress(false);

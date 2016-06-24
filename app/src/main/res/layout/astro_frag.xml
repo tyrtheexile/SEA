@@ -9,7 +9,7 @@
         android:id="@+id/airImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/water" />
+        android:src="@drawable/air" />
 
     <EditText
         android:layout_width="match_parent"
@@ -23,12 +23,12 @@
         android:textIsSelectable="false" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/waterImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/abc_seekbar_thumb_material" />
+        android:src="@drawable/water" />
 
     <EditText
         android:layout_width="match_parent"
@@ -42,12 +42,12 @@
         android:textIsSelectable="false" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/foodImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@android:drawable/sym_def_app_icon" />
+        android:src="@drawable/food" />
 
     <EditText
         android:layout_width="match_parent"

@@ -90,6 +90,24 @@ public class MainGame2 extends Activity {
         }
     };
 
+    public Handler updateProgressHandler = new Handler() {
+        @Override
+        public void handleMessage (Message msg)
+        {
+            final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+            Bundle bund = msg.getData();
+            int num = bund.getInt("progress");
+            int max = bund.getInt("max");
+            if (max!=0)
+            {
+                progressBar.setMax(max);
+                progressBar.setProgress(0);
+            } else {
+                progressBar.setProgress(num);
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -100,7 +118,7 @@ public class MainGame2 extends Activity {
         loadGTimer();
 
         Global.setView((TextView)findViewById(R.id.DispWin),(ScrollView)findViewById(R.id.ScrollWin));
-        Global.setHandler(buttonNames,buttonPress,textUpdate);
+        Global.setHandler(buttonNames,buttonPress,textUpdate,updateProgressHandler);
         Global.setActivity(this);
 
         buttonOps = new ButtonOps(this);

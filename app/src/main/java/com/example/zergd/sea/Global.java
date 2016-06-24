@@ -32,6 +32,7 @@ public class Global implements java.io.Serializable {
     public static Handler buttonNames;
     public static Handler butttonPress;
     public static Handler textUpdate;
+    public static Handler updateProgressHandler;
 
     public static int choice=0;
     public static Boolean choiceFlag=false;
@@ -130,11 +131,12 @@ public class Global implements java.io.Serializable {
         return outputBlock;
     }
 
-    public static void setHandler(Handler h1,Handler h2, Handler h3)
+    public static void setHandler(Handler h1,Handler h2, Handler h3,Handler h4)
     {
         buttonNames = h1;
         butttonPress = h2;
         textUpdate = h3;
+        updateProgressHandler =h4;
     }
 
     public static Handler getHandler(String name){
@@ -142,6 +144,8 @@ public class Global implements java.io.Serializable {
             return buttonNames;
         if (name.equals("buttonPress"))
             return butttonPress;
+        if (name.equals("progress"))
+            return updateProgressHandler;
         else
             return textUpdate;
     }
