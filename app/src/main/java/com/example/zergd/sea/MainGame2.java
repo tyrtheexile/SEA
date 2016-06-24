@@ -141,7 +141,6 @@ public class MainGame2 extends Activity {
                     updateUI();
                 }
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -180,12 +179,12 @@ public class MainGame2 extends Activity {
                 Log.e("Test",Log.getStackTraceString(ex));
             }
             //Log.e("Test","End of Load in"+astro.getName());
-
+            // TODO Fast Forward the Sim Somehow
         }
         else {
             this.astro = new Astronaut("Chris");
             this.base = new MainBase("Alpha", astro);
-    }
+            }
     }
 
     protected void loadGTimer()

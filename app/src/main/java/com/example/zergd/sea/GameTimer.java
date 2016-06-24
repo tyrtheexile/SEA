@@ -6,11 +6,12 @@ import android.os.Message;
 import com.example.zergd.sea.Astronaut.*;
 import com.example.zergd.sea.Building.*;
 
+import java.io.File;
+
 public class GameTimer implements java.io.Serializable {
 	
 	private Boolean endGameHard=false;
 	private int actionTimer=10;
-    private int actionMax=10;
 	
 	private Astronaut astro;
 	private MainBase base;
@@ -59,7 +60,12 @@ public class GameTimer implements java.io.Serializable {
 			Global.TextDisp(astro.getStatusString());
 			System.out.println("\n\nGame Over!");
 			endGameHard=true;
-			System.exit(0);
+            // TODO Delete Files exit to home screen
+            File asF = new File(Global.getActivity().getFilesDir()+"/astroOut.bin");
+            File bsF = new File(Global.getActivity().getFilesDir()+"/baseOut.bin");
+            asF.delete();
+            bsF.delete();
+			Global.getActivity().finish();
 		}
 
 		//if Timer <=0

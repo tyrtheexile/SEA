@@ -28,7 +28,6 @@ public class CookTop extends Item {
 
 	@Override
 	public int aquisitionModifier() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

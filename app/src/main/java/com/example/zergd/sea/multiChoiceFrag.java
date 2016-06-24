@@ -60,12 +60,30 @@ public class multiChoiceFrag extends Fragment {
             but4b = (Button) view.findViewById(R.id.button4);
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
-            but1b.setClickable(butOff1);
-            but2b.setClickable(butOff2);
-            but3b.setClickable(butOff3);
-            but4b.setClickable(butOff4);
-            but5b.setClickable(butOff5);
-            but6b.setClickable(butOff6);
+            if (!butOff1) {
+                but1b.setClickable(butOff1);
+                but1b.setAlpha(.5f);
+            }
+            if (!butOff2) {
+                but2b.setClickable(butOff2);
+                but2b.setAlpha(.5f);
+            }
+            if (!butOff3) {
+                but3b.setClickable(butOff3);
+                but3b.setAlpha(.5f);
+            }
+            if (!butOff4) {
+                but4b.setClickable(butOff4);
+                but4b.setAlpha(.5f);
+            }
+            if (!butOff5) {
+                but5b.setClickable(butOff5);
+                but5b.setAlpha(.5f);
+            }
+            if (!butOff6) {
+                but6b.setClickable(butOff6);
+                but6b.setAlpha(.5f);
+            }
             but1b.setText(but1);
             but2b.setText(but2);
             but3b.setText(but3);

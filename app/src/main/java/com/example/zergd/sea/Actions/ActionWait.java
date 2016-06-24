@@ -12,7 +12,7 @@ public class ActionWait extends Action {
 
 	@Override
 	public void doAction() {
-		// TODO Auto-generated method stub
+
 
 	}
 

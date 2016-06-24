@@ -17,7 +17,6 @@ public class TurboSynthesizer extends Item {
 
 	@Override
 	public int cycleModifier() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

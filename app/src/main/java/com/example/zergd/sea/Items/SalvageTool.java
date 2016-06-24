@@ -29,7 +29,6 @@ public class SalvageTool extends Item {
 
 	@Override
 	public int aquisitionModifier() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

@@ -63,7 +63,6 @@ public class MainGame extends AppCompatActivity {
                     gTimer.StartGame();
                 }
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 

@@ -10,7 +10,6 @@ public abstract class MultiItem extends Item {
 	public MultiItem(Astronaut astro, MainBase base) {
 		super(astro, base);
 		numberOfThisItem=0;
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
