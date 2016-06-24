@@ -35,11 +35,11 @@ public class astroFrag extends Fragment {
         TextView foodT = (TextView) view.findViewById(R.id.foodText);
         foodT.setText(Global.make3digit(food)+"");
         TextView airMT = (TextView) view.findViewById(R.id.airMaxText);
-        airMT.setText(Global.make3digit(airM)+"");
+        airMT.setText("/ "+Global.make3digit(airM)+"");
         TextView waterMT = (TextView) view.findViewById(R.id.waterMaxText);
-        waterMT.setText(Global.make3digit(waterM)+"");
+        waterMT.setText("/ "+Global.make3digit(waterM)+"");
         TextView foodMT = (TextView) view.findViewById(R.id.foodMaxText);
-        foodMT.setText(Global.make3digit(foodM)+"");
+        foodMT.setText("/ "+Global.make3digit(foodM)+"");
     }
 
     //Update handler

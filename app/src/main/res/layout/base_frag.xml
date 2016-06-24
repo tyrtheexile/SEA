@@ -21,7 +21,21 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alloyMaxText"
+        android:clickable="false"
+        android:editable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
 
     <ImageView
         android:layout_width="43dp"
@@ -41,7 +55,21 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/carbonMaxTest"
+        android:clickable="false"
+        android:editable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
 
     <ImageView
         android:layout_width="43dp"
@@ -61,7 +89,21 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hydrogenMaxText"
+        android:clickable="false"
+        android:editable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
 
     <ImageView
         android:layout_width="43dp"
@@ -81,6 +123,20 @@
         android:longClickable="false"
         android:linksClickable="false"
         android:textIsSelectable="false"
-        android:textColor="@color/SpaceTextColor" />
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/energyMaxText"
+        android:clickable="false"
+        android:editable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_textsize" />
 
 </LinearLayout>
