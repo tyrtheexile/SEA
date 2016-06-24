@@ -14,6 +14,8 @@ import com.example.zergd.sea.Items.*;
 import com.example.zergd.sea.Global;
 import com.example.zergd.sea.multiChoiceFrag;
 
+// TODO Sometimes hitting this button skips the action
+// TODO Sometimes an action that is too expensive can still be selected
 public class ActionSynthesize extends Action {
 	
 	MainBase base;
@@ -45,7 +47,7 @@ public class ActionSynthesize extends Action {
 		do
 		{
 			int choice = displayMenu();
-            Global.log(choice+"");
+            Global.log(choice+"   Choice Number");
 			//int choice = Choice.getInput();
 			if (choice==7 || choice>buyableItems.size()) {
 				setTime(1);
@@ -64,8 +66,6 @@ public class ActionSynthesize extends Action {
 			else
 				Global.TextDisp("\nCannot Affor that Item");			
 		} while (buy==false);
-        // TODO Double check this gets rid of the weird choice exit
-        multiChoiceFrag.choice=10;
 	}
 	
 	public int displayMenu()
@@ -76,11 +76,11 @@ public class ActionSynthesize extends Action {
 		Bundle bund = new Bundle();
 		//Display each item in the buy-able array
 		Global.TextDisp("\nYou Can Build:  (Alloy,Carbon,Hydrogen)");
-		Global.TextDisp("0. Cancel");
+		//Global.TextDisp("0. Cancel");
 		int counter=1;
 		for(Item i:buyableItems)
 		{
-            //Global.log("butOff"+counter+"  "+base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
+            Global.log("butOff"+counter+"  "+base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
 			bund.putString("but"+counter,(counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
             bund.putBoolean("butOff"+counter,base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
 			if (counter>6) break;
@@ -92,19 +92,16 @@ public class ActionSynthesize extends Action {
             //Global.log("butOff"+i + "false");
 		}
 
-        Global.log("First Hide message Starting");
         Message frag = new Message();
         Bundle fragb = new Bundle();
         fragb.putInt("hide",1);
         frag.setData(fragb);
         multiHandler.sendMessage(frag);
 
-        Global.log("Hide Complete, Send bundle string");
         Message msg = new Message();
         msg.setData(bund);
         multiChoiceFrag.getHandler().sendMessage(msg);
 
-        Global.log("Before while");
         while (Choice.getInput()==10)
 		{
             try {
@@ -114,14 +111,12 @@ public class ActionSynthesize extends Action {
             }
 		}
 
-        Global.log("Before Hide");
         Message frg = new Message();
         Bundle frgb = new Bundle();
         frgb.putInt("hide",0);
         frg.setData(frgb);
         multiHandler.sendMessage(frg);
 
-        Global.log("Before Return");
         return multiChoiceFrag.choice;
 	}
 	

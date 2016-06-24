@@ -48,7 +48,6 @@ public class GameTimer implements java.io.Serializable {
 		Global.DebugMSG(5, "Action Timer Countdown: "+actionTimer);
 
         //Set Progress bar
-        Global.log(actionTimer+"");
         Message msg = new Message();
         Bundle bund = new Bundle();
         bund.putInt("progress",actionTimer);

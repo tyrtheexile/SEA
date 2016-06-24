@@ -203,7 +203,6 @@ public class MainGame2 extends Activity {
     public void onPause(){
         super.onPause();
 
-        // TODO Serialize GTimer
         //Save Astro
         try
         {
