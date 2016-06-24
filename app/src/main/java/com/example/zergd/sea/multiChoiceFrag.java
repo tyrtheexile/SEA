@@ -161,7 +161,7 @@ public class multiChoiceFrag extends Fragment {
 
     public void onPause(){
         super.onPause();
-        choice=7;
+        choice=8;
         multiChoiceFrag.sendAns();
     }
 
