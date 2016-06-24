@@ -45,8 +45,9 @@ public class ActionSynthesize extends Action {
 		do
 		{
 			int choice = displayMenu();
+            Global.log(choice+"");
 			//int choice = Choice.getInput();
-			if (choice==7) {
+			if (choice==7 || choice>buyableItems.size()) {
 				setTime(1);
 				break;
 			}

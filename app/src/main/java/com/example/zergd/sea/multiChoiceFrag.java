@@ -12,6 +12,7 @@ import android.widget.Button;
 
 // TODO Figure out what happens when a ---- button pressed
 
+// TODO Add a Cancel Button
 public class multiChoiceFrag extends Fragment {
 
     private static View view;
