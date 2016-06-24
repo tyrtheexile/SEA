@@ -9,7 +9,8 @@
         android:id="@+id/airImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/air" />
+        android:src="@drawable/air"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -28,7 +29,8 @@
         android:id="@+id/waterImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/water" />
+        android:src="@drawable/water"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -47,7 +49,8 @@
         android:id="@+id/foodImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/food" />
+        android:src="@drawable/food"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:layout_width="match_parent"

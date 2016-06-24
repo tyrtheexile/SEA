@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         Global.set_Debug(6);
         Global.setImmortal(false);
-        Global.setTimeIncrement(10000);
+        Global.setTimeIncrement(1000);
         Global.setBasesize(5);
         Global.setTestmode(1);
 
