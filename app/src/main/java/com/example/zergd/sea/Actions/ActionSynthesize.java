@@ -46,12 +46,12 @@ public class ActionSynthesize extends Action {
 		{
 			int choice = displayMenu();
 			//int choice = Choice.getInput();
-			if (choice==0) {
+			if (choice==7) {
 				setTime(1);
 				break;
 			}
 			//Error Check if More than 6 Items
-			if (choice>6||choice<0)
+			if (choice>7||choice<0)
 			{
 				Global.TextDisp("\n--------------\nBad Input Number - Try Again\n--------------");
 				Global.DebugMSG(3, "\nNumber Free Items: "+freeItems.size()+" - Number entered: "+choice);

@@ -79,12 +79,15 @@ public class MainBase implements java.io.Serializable {
 	
 	public String getStatusString()
 	{
-		String str,str1,str2,str3,str4;
-		str1 = "\nStatus of: "+getName()+"\n Alloy: "+getAlloy()+"/"+getAlloyMax() +" ("+astro.getChangeData().getAlloyChange()+")";
-		str2 = "\n Carbon: "+getCarbon()+"/"+getCarbonMax() +" ("+astro.getChangeData().getCarbonChange()+")";
-		str3 = "\n Hydrogen: "+getHydrogen()+"/"+getHydrogenMax() +" ("+astro.getChangeData().getHydrogenChange()+")";
-		str4 = "\n Energy: "+getEnergy()+"/"+getEnergyMax() +" ("+astro.getChangeData().getEnergyChange()+")";
-		str=str1+str2+str3+str4;
+		String str="";
+		if (Global.get_Debug()>=3) {
+			String str1, str2, str3, str4;
+			str1 = "\nStatus of: " + getName() + "\n Alloy: " + getAlloy() + "/" + getAlloyMax() + " (" + astro.getChangeData().getAlloyChange() + ")";
+			str2 = "\n Carbon: " + getCarbon() + "/" + getCarbonMax() + " (" + astro.getChangeData().getCarbonChange() + ")";
+			str3 = "\n Hydrogen: " + getHydrogen() + "/" + getHydrogenMax() + " (" + astro.getChangeData().getHydrogenChange() + ")";
+			str4 = "\n Energy: " + getEnergy() + "/" + getEnergyMax() + " (" + astro.getChangeData().getEnergyChange() + ")";
+			str = str1 + str2 + str3 + str4;
+		}
 		return str;
 	}
 	

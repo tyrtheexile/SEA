@@ -119,4 +119,9 @@ public class multiChoiceFrag extends Fragment {
         choiceHandler.sendMessage(msg);*/
     }
 
+    public void onPause(){
+        choice=7;
+        multiChoiceFrag.sendAns();
+    }
+
 }

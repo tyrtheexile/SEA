@@ -66,12 +66,15 @@ public class Astronaut implements java.io.Serializable {
 	
 	public String getStatusString()
 	{
-		String str,str1,str2,str3,str4;
-		str1 = "\nStatus of: "+getName()+"\n Air: "+getAir()+"/"+getAirMax() +" ("+changeData.getAirChange()+")";
-		str2 = "\n Water: "+getWater()+"/"+getWaterMax() +" ("+changeData.getWaterChange()+")";
-		str3 = "\n Food: "+getFood()+"/"+getFoodMax() +" ("+changeData.getFoodChange()+")";
-		str4 = "\n Hunger: "+getHunger()+"/"+getHungerMax() +" ("+changeData.getHungerChange()+")";
-		str=str1+str2+str3+str4;
+		String str="";
+		if (Global.get_Debug()>=3) {
+			String str1, str2, str3, str4;
+			str1 = "\nStatus of: " + getName() + "\n Air: " + getAir() + "/" + getAirMax() + " (" + changeData.getAirChange() + ")";
+			str2 = "\n Water: " + getWater() + "/" + getWaterMax() + " (" + changeData.getWaterChange() + ")";
+			str3 = "\n Food: " + getFood() + "/" + getFoodMax() + " (" + changeData.getFoodChange() + ")";
+			str4 = "\n Hunger: " + getHunger() + "/" + getHungerMax() + " (" + changeData.getHungerChange() + ")";
+			str = str1 + str2 + str3 + str4;
+		}
 		return str;
 	}
 	
