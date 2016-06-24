@@ -47,6 +47,10 @@ public class GameTimer implements java.io.Serializable {
 		actionTimer--;
 		Global.DebugMSG(5, "Action Timer Countdown: "+actionTimer);
 
+        Global.TextDisp(Global.make3digit(12345));
+        Global.TextDisp(Global.make3digit(1234567));
+        Global.TextDisp(Global.make3digit(12345678));
+
         //Set Progress bar
         Message msg = new Message();
         Bundle bund = new Bundle();

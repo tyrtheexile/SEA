@@ -164,11 +164,26 @@ public class Global implements java.io.Serializable {
     }
 
     public static String make3digit(int num){
-        String str="";
+        String str=num+"";
         float flt=(float) num;
-        if((flt%1000)<1000)
-        {
 
+        float thousand = flt/1000;
+        if(thousand<1000)
+        {
+            str=thousand+"k";
+            return str;
+        }
+        float million = thousand/1000;
+        if(million<1000)
+        {
+            str=million+"m";
+            return str;
+        }
+        float billion = million/1000;
+        if(billion<1000)
+        {
+            str=billion+"m";
+            return str;
         }
 
         return str;

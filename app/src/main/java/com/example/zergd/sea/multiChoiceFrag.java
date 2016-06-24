@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-// TODO Add a Cancel Button
 public class multiChoiceFrag extends Fragment {
 
     private static View view;
