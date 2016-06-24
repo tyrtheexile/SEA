@@ -73,24 +73,24 @@ public class multiChoiceFrag extends Fragment {
             but4b.setEnabled(true);
             but5b.setEnabled(true);
             but6b.setEnabled(true);
-            if (!butOff2) {
-                but2b.setEnabled(butOff2);
+            if (butOff2==false) {
+                but2b.setEnabled(false);
                 but2b.setAlpha(.5f);
             }
-            if (!butOff3) {
-                but3b.setEnabled(butOff3);
+            if (butOff3==false) {
+                but3b.setEnabled(false);
                 but3b.setAlpha(.5f);
             }
-            if (!butOff4) {
-                but4b.setEnabled(butOff4);
+            if (butOff4==false) {
+                but4b.setEnabled(false);
                 but4b.setAlpha(.5f);
             }
-            if (!butOff5) {
-                but5b.setEnabled(butOff5);
+            if (butOff5==false) {
+                but5b.setEnabled(false);
                 but5b.setAlpha(.5f);
             }
-            if (!butOff6) {
-                but6b.setEnabled(butOff6);
+            if (butOff6==false) {
+                but6b.setEnabled(false);
                 but6b.setAlpha(.5f);
             }
             but1b.setText(but1);
@@ -159,10 +159,11 @@ public class multiChoiceFrag extends Fragment {
         choiceHandler.sendMessage(msg);*/
     }
 
+    /*
     public void onPause(){
         super.onPause();
         choice=8;
         multiChoiceFrag.sendAns();
     }
-
+    */
 }
