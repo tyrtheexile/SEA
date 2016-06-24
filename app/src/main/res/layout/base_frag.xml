@@ -9,8 +9,7 @@
         android:id="@+id/alloyImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/alloy"
-        android:background="@android:color/transparent"/>
+        android:background="@drawable/alloy"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -29,8 +28,7 @@
         android:id="@+id/carbonImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/carbon"
-        android:background="@android:color/transparent"/>
+        android:background="@drawable/carbon"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -49,8 +47,7 @@
         android:id="@+id/hydrogenImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/hydrogen"
-        android:background="@android:color/transparent"/>
+        android:background="@drawable/hydrogen"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -69,8 +66,7 @@
         android:id="@+id/energyImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/energy"
-        android:background="@android:color/transparent"/>
+        android:background="@drawable/energy"/>
 
     <EditText
         android:layout_width="match_parent"

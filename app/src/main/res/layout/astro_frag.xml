@@ -28,8 +28,7 @@
         android:id="@+id/waterImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/water"
-        android:background="@android:color/transparent"/>
+        android:background="@drawable/water"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -48,8 +47,7 @@
         android:id="@+id/foodImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/food"
-        android:background="@android:color/transparent"/>
+        android:background="@drawable/food"/>
 
     <EditText
         android:layout_width="match_parent"
