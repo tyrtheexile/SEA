@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-// TODO Figure out what happens when a ---- button pressed
-
 // TODO Add a Cancel Button
 public class multiChoiceFrag extends Fragment {
 
@@ -70,10 +68,6 @@ public class multiChoiceFrag extends Fragment {
             but4b.setAlpha(.85f);
             but5b.setAlpha(.85f);
             but6b.setAlpha(.85f);
-            if (!butOff1) {
-                but1b.setEnabled(butOff1);
-                but1b.setAlpha(.5f);
-            }
             if (!butOff2) {
                 but2b.setEnabled(butOff2);
                 but2b.setAlpha(.5f);
