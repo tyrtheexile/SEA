@@ -76,6 +76,7 @@ public class multiChoiceFrag extends Fragment {
             but4b.setEnabled(true);
             but5b.setEnabled(true);
             but6b.setEnabled(true);
+            Global.log("but1: "+butOff1+"   but2:"+butOff2);
             if (butOff1==false) {
                 but1b.setEnabled(false);
                 but1b.setAlpha(.5f);

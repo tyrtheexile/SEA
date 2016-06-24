@@ -162,4 +162,10 @@ public class Global implements java.io.Serializable {
     {
         Log.e("RTest: ", s);
     }
+
+    public static String make3digit(int num){
+        String str="";
+        float flt=(float) num;
+        return str;
+    }
 }

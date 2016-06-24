@@ -14,7 +14,6 @@ import com.example.zergd.sea.Items.*;
 import com.example.zergd.sea.Global;
 import com.example.zergd.sea.multiChoiceFrag;
 
-// TODO Sometimes hitting this button skips the action
 // TODO Sometimes an action that is too expensive can still be selected
 public class ActionSynthesize extends Action {
 	
