@@ -166,6 +166,11 @@ public class Global implements java.io.Serializable {
     public static String make3digit(int num){
         String str="";
         float flt=(float) num;
+        if((flt%1000)<1000)
+        {
+
+        }
+
         return str;
     }
 }
