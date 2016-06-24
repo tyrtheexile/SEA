@@ -22,7 +22,7 @@ public class Global implements java.io.Serializable {
 	private static int debug=0;
 	private static int timeIncrement=1000;
 	private static boolean immortal=false;
-	private static int basesize=20;
+	private final static int basesize=5;
     private static TextView outputView;
     private static ScrollView scrollView;
     private static Activity currentActivity;
@@ -84,9 +84,6 @@ public class Global implements java.io.Serializable {
 	public static Boolean getImmortal() {return immortal;}
 	public static int getBasesize() {
 		return basesize;
-	}
-	public static void setBasesize(int basesize) {
-		Global.basesize = basesize;
 	}
 	public static int getTestmode() {
 		return testmode;

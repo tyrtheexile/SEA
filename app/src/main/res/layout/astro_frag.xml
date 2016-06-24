@@ -20,7 +20,8 @@
         android:contextClickable="false"
         android:longClickable="false"
         android:linksClickable="false"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor" />
 
     <ImageView
         android:layout_width="43dp"
@@ -39,7 +40,8 @@
         android:contextClickable="false"
         android:longClickable="false"
         android:linksClickable="false"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor" />
 
     <ImageView
         android:layout_width="43dp"
@@ -58,5 +60,6 @@
         android:contextClickable="false"
         android:longClickable="false"
         android:linksClickable="false"
-        android:textIsSelectable="false" />
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor" />
 </LinearLayout>

@@ -84,6 +84,7 @@ public class ActionSynthesize extends Action {
 		for (int i=7;i>counter;i--)
 		{
 			bund.putString("but"+i,"-------");
+            bund.putBoolean("butOff"+counter,false);
 		}
 
         Global.log("First Hide message Starting");
