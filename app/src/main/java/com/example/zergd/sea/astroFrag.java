@@ -13,8 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-// TODO UPdate with Max values, and number shortner k,m,b etc
-
 public class astroFrag extends Fragment {
 
     private View view;

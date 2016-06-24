@@ -8,6 +8,7 @@ import com.example.zergd.sea.Building.*;
 
 import java.io.File;
 import java.sql.Time;
+import java.util.Date;
 
 public class GameTimer implements java.io.Serializable {
 	
@@ -16,6 +17,9 @@ public class GameTimer implements java.io.Serializable {
 	
 	private Astronaut astro;
 	private MainBase base;
+
+    private Date date = new Date();
+    private long lastTurnTime=0;
 	
 	private int TurnCount=0;
 	
@@ -24,6 +28,18 @@ public class GameTimer implements java.io.Serializable {
 	{
 		this.astro=astro;
 		this.base=base;
+        long currentTime=date.getTime();
+        long timeDiff=currentTime-lastTurnTime;
+        int increment = Global.getTimeIncrement();
+        int turns = (int)timeDiff/increment;
+        Global.setTimeIncrement(1);
+        while (turns>0 && actionTimer>0)
+        {
+            StartGame();
+            turns--;
+            actionTimer--;
+        }
+        Global.setTimeIncrement(increment);
 	}
 
     public void setGameTimer(Astronaut astro,MainBase base)
@@ -95,6 +111,7 @@ public class GameTimer implements java.io.Serializable {
 		}
 
 		Global.setGameInProgress(false);
+        lastTurnTime = date.getTime();
 	}
 
 }
