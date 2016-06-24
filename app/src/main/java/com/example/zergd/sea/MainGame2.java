@@ -283,6 +283,10 @@ public class MainGame2 extends Activity {
         bundleb.putInt("carbon",base.getCarbon());
         bundleb.putInt("hydrogen",base.getHydrogen());
         bundleb.putInt("energy",base.getEnergy());
+        bundleb.putInt("alloyM",base.getAlloyMax());
+        bundleb.putInt("carbonM",base.getCarbonMax());
+        bundleb.putInt("hydrogenM",base.getHydrogenMax());
+        bundleb.putInt("energyM",base.getEnergyMax());
         mesb.setData(bundleb);
         baseHandler.sendMessage(mesb);
         ////////////
