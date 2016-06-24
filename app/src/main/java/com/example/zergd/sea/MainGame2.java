@@ -115,7 +115,6 @@ public class MainGame2 extends Activity {
         setContentView(R.layout.activity_choice);
 
         loadSave();
-        loadGTimer();
 
         Global.setView((TextView)findViewById(R.id.DispWin),(ScrollView)findViewById(R.id.ScrollWin));
         Global.setHandler(buttonNames,buttonPress,textUpdate,updateProgressHandler);
@@ -178,18 +177,25 @@ public class MainGame2 extends Activity {
                 ex.printStackTrace();
                 Log.e("Test",Log.getStackTraceString(ex));
             }
+            try
+            {
+                FileInputStream fop3 = openFileInput("timerOut.bin");
+                ObjectInputStream tIn = new ObjectInputStream(fop3);
+                this.gTimer = (GameTimer) tIn.readObject();
+            }
+            catch(Exception ex)
+            {
+                ex.printStackTrace();
+                Log.e("Test",Log.getStackTraceString(ex));
+            }
             //Log.e("Test","End of Load in"+astro.getName());
             // TODO Fast Forward the Sim Somehow
         }
         else {
             this.astro = new Astronaut("Chris");
             this.base = new MainBase("Alpha", astro);
+            this.gTimer=new GameTimer(astro,base);
             }
-    }
-
-    protected void loadGTimer()
-    {
-        gTimer=new GameTimer(astro,base);
     }
 
     @Override
@@ -220,6 +226,21 @@ public class MainGame2 extends Activity {
             baseOut.writeObject(this.base); // write the class as an 'object'
             baseOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
             baseOut.close();// close the stream
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+            Log.e("Test",Log.getStackTraceString(ex));
+        }
+
+        //Save mainBase
+        try
+        {
+            FileOutputStream fop3 = openFileOutput("timerOut.bin", Context.MODE_PRIVATE);
+            ObjectOutputStream timerOut = new ObjectOutputStream(fop3);
+            timerOut.writeObject(this.gTimer); // write the class as an 'object'
+            timerOut.flush(); // flush the stream to insure all of the information was written to 'save.bin'
+            timerOut.close();// close the stream
         }
         catch(Exception ex)
         {

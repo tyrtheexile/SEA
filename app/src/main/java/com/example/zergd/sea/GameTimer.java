@@ -60,11 +60,12 @@ public class GameTimer implements java.io.Serializable {
 			Global.TextDisp(astro.getStatusString());
 			System.out.println("\n\nGame Over!");
 			endGameHard=true;
-            // TODO Delete Files exit to home screen
             File asF = new File(Global.getActivity().getFilesDir()+"/astroOut.bin");
             File bsF = new File(Global.getActivity().getFilesDir()+"/baseOut.bin");
+            File tsF = new File(Global.getActivity().getFilesDir()+"/timerOut.bin");
             asF.delete();
             bsF.delete();
+            tsF.delete();
 			Global.getActivity().finish();
 		}
 
