@@ -4,12 +4,12 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/airImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@drawable/abc_ratingbar_indicator_material" />
+        android:src="@drawable/water" />
 
     <EditText
         android:layout_width="match_parent"
