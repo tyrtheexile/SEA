@@ -4,12 +4,12 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/alloyImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@android:drawable/progress_indeterminate_horizontal" />
+        android:src="@drawable/alloy" />
 
     <EditText
         android:layout_width="match_parent"
@@ -23,12 +23,12 @@
         android:textIsSelectable="false" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/carbonImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@android:drawable/ic_menu_always_landscape_portrait" />
+        android:src="@drawable/carbon" />
 
     <EditText
         android:layout_width="match_parent"
@@ -42,12 +42,12 @@
         android:textIsSelectable="false" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/hydrogenImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@android:drawable/ic_menu_today" />
+        android:src="@drawable/hydrogen" />
 
     <EditText
         android:layout_width="match_parent"
@@ -61,12 +61,12 @@
         android:textIsSelectable="false" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="57dp"
         android:id="@+id/energyImg"
         android:minHeight="20dp"
         android:minWidth="50dp"
-        android:src="@android:drawable/sym_contact_card" />
+        android:src="@drawable/energy" />
 
     <EditText
         android:layout_width="match_parent"
