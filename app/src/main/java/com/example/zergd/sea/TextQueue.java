@@ -109,7 +109,7 @@ public class TextQueue implements java.io.Serializable{
     }
 
     public static void startGameMessages(){
-        putMessage("Well it feels like we just docked with the station. ");
+        putMessage("Well it feels like we just docked with the station. Whoever was on the stick sure did a rough job of it...damn near knocked me out of my bunk.");
         putMessage("Testing 2");
         putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
         putMessage("Delay Test4",4);
