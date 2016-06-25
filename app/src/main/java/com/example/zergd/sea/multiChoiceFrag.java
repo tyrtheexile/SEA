@@ -21,6 +21,12 @@ public class multiChoiceFrag extends Fragment {
     private static Button but5b;
     private static Button but6b;
     private static Button cancel;
+    private static TextView but1Desc;
+    private static TextView but2Desc;
+    private static TextView but3Desc;
+    private static TextView but4Desc;
+    private static TextView but5Desc;
+    private static TextView but6Desc;
 
     public static int choice =10;
     public static Boolean choiceFlag=false;
@@ -69,14 +75,12 @@ public class multiChoiceFrag extends Fragment {
             but4b = (Button) view.findViewById(R.id.button4);
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
-            TextView but1Desc = (TextView) view.findViewById(R.id.desc1);
-            TextView but2Desc = (TextView) view.findViewById(R.id.desc2);
-            TextView but3Desc = (TextView) view.findViewById(R.id.desc3);
-            TextView but4Desc = (TextView) view.findViewById(R.id.desc4);
-            TextView but5Desc = (TextView) view.findViewById(R.id.desc5);
-            TextView but6Desc = (TextView) view.findViewById(R.id.desc6);
-            Global.log("\n\n==========================================");
-            Global.log(butDesc1);
+            but1Desc = (TextView) view.findViewById(R.id.desc1);
+            but2Desc = (TextView) view.findViewById(R.id.desc2);
+            but3Desc = (TextView) view.findViewById(R.id.desc3);
+            but4Desc = (TextView) view.findViewById(R.id.desc4);
+            but5Desc = (TextView) view.findViewById(R.id.desc5);
+            but6Desc = (TextView) view.findViewById(R.id.desc6);
             but1Desc.setText(butDesc1);
             but2Desc.setText(butDesc2);
             but3Desc.setText(butDesc3);

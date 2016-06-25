@@ -29,9 +29,9 @@
         android:textSize="@dimen/aaa_frag_desc_textsize"
         android:gravity="right"
         android:textAlignment="center"
-        android:minHeight="10dp"
         android:maxLines="1"
-        android:text="----" />
+        android:text="----"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -60,7 +60,8 @@
         android:textAlignment="center"
         android:minHeight="10dp"
         android:maxLines="1"
-        android:text="----" />
+        android:text="----"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -89,7 +90,8 @@
         android:textAlignment="center"
         android:minHeight="10dp"
         android:maxLines="1"
-        android:text="----" />
+        android:text="----"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -118,7 +120,8 @@
         android:textAlignment="center"
         android:minHeight="10dp"
         android:maxLines="1"
-        android:text="----" />
+        android:text="----"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -147,7 +150,8 @@
         android:textAlignment="center"
         android:minHeight="10dp"
         android:maxLines="1"
-        android:text="----" />
+        android:text="----"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -176,7 +180,8 @@
         android:textAlignment="center"
         android:minHeight="10dp"
         android:maxLines="1"
-        android:text="----" />
+        android:text="----"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:layout_width="wrap_content"

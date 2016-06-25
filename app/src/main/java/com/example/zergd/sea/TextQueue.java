@@ -8,6 +8,8 @@ public class TextQueue implements java.io.Serializable{
     private static ArrayList<String> messageQueue = new ArrayList<String>();
     private static ArrayList<String> statusQueue = new ArrayList<String>();
 
+    private static ArrayList<Integer> delayTimes = new ArrayList<Integer>();
+    private static ArrayList<String> delayStrings = new ArrayList<String>();
 
 
     public static void nextMessage(int turn){
@@ -32,6 +34,19 @@ public class TextQueue implements java.io.Serializable{
         }
         str = str + "\n------End Log-----";
         Global.sendTextBlock(str);
+
+        //Decrement timers in delayTimes
+        for (int i=0;i<delayTimes.size();i++){
+            int tmp=delayTimes.get(i);
+            delayTimes.set(i,tmp-1);
+            if (delayTimes.get(i)<=0)
+            {
+                putMessage(delayStrings.get(i));
+                delayTimes.remove(i);
+                delayStrings.remove(i);
+            }
+        }
+
     }
 
     public static void putMessage(String str){
@@ -46,7 +61,8 @@ public class TextQueue implements java.io.Serializable{
         }
     }
     public static void putMessage(String str,int i){
-        messageQueue.add(i,str);
+        delayStrings.add(str);
+        delayTimes.add(i);
     }
 
     public static void putStatus(String str){
