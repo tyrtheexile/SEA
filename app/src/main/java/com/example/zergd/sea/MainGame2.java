@@ -23,6 +23,7 @@ import android.util.*;
 
 // TODO add story narrative
 // TODO add base building
+// TODO Add item descriptions below buttons
 
 public class MainGame2 extends Activity {
 
@@ -140,6 +141,7 @@ public class MainGame2 extends Activity {
                     //clearTextHandler.sendMessage(new Message());
                     gTimer.StartGame();
                     updateUI();
+                    TextQueue.nextMessage(gTimer.getTurn());
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();

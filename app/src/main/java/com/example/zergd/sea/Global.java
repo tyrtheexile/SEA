@@ -38,6 +38,8 @@ public class Global implements java.io.Serializable {
     public static int choice=0;
     public static Boolean choiceFlag=false;
 
+    public static Boolean logOldTextDisp=true;
+
     public static Boolean newGame=false;
 	
 	//Testmode is used to implement different starting setupds
@@ -73,13 +75,19 @@ public class Global implements java.io.Serializable {
 		//Global.outputStrings.add(str);
 
         //Gen 3
+
+        if(Global.logOldTextDisp==true) {
+            Global.log(str);
+        }
+	}
+    public static void sendTextBlock(String str){
         Handler hand = Global.getHandler("textDisp");
         Message msg = new Message();
         Bundle bundle = new Bundle();
-        bundle.putString("text","\n"+str);
+        bundle.putString("text", "\n" + str);
         msg.setData(bundle);
         hand.sendMessage(msg);
-	}
+    }
 	
 	public static void setImmortal(Boolean i) {immortal=i;}
 	public static Boolean getImmortal() {return immortal;}

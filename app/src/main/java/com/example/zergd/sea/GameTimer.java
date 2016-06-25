@@ -22,12 +22,16 @@ public class GameTimer implements java.io.Serializable {
     private long lastTurnTime=0;
 	
 	private int TurnCount=0;
+    private TextQueue textQueue;
 	
 	//Initialize the Game-play loop with a default Astronaut and Base
 	public GameTimer(Astronaut astro,MainBase base) 
 	{
 		this.astro=astro;
 		this.base=base;
+        textQueue = new TextQueue();
+        textQueue.startGameMessages();
+
         long currentTime=date.getTime();
         long timeDiff=currentTime-lastTurnTime;
         int increment = Global.getTimeIncrement();
@@ -113,5 +117,9 @@ public class GameTimer implements java.io.Serializable {
 		Global.setGameInProgress(false);
         lastTurnTime = date.getTime();
 	}
+
+    public int getTurn(){
+        return TurnCount;
+    }
 
 }

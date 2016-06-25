@@ -5,12 +5,14 @@ import java.util.Random;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class CargoManifest extends Item {
 
 	public CargoManifest(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Cargo Manifest");
+		setDescription("Allows you to find what resources are left on the ship");
 		setAlloyCost(5);
 	}
 
@@ -40,6 +42,8 @@ public class CargoManifest extends Item {
 	public int aquisitionModifier() {
 		base.getItems().addFreeItem(new SmallSolarPanel(astro,base));
 		base.getItems().addFreeItem(new PickAxe(astro,base));
+		TextQueue.putMessage("It's kinda hard to figure out...\n\n ...but it looks like this lists everything the ship was hauling...\nmaybe you can scrounge whats left!");
+		TextQueue.putMessage("The amount of Cargo and apparatus that were destroyed in the crash is astounding...",50);
 		return 0;
 	}
 

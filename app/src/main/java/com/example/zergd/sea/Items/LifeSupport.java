@@ -5,6 +5,7 @@ import java.util.Random;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class LifeSupport extends Item {
 	
@@ -13,6 +14,7 @@ public class LifeSupport extends Item {
 	public LifeSupport(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Life Support");
+		setDescription("Keeps your resources up when charged.");
 		setAlloyCost(30);
 		setCarbonCost(10);
 		setHydrogenCost(10);
@@ -43,6 +45,7 @@ public class LifeSupport extends Item {
 				int waterinc= (int) (astro.getWaterMax()*.4);
 				int foodinc= (int) (astro.getFoodMax()*.35);
 				Global.TextDisp("Life Support Kicking In... \n  +"+airinc+" Air\n  +"+waterinc+" Water\n  +"+foodinc+" Food");
+				TextQueue.putStatus("Life Support Kicking In... \n  +"+airinc+" Air\n  +"+waterinc+" Water\n  +"+foodinc+" Food");
 				fired=50;
 				astro.setAir(astro.getAir()+airinc);
 				astro.setWater(astro.getWater()+waterinc);
@@ -50,6 +53,7 @@ public class LifeSupport extends Item {
 				
 			}else{
 				Global.TextDisp("Not Enough Energy to run LifeSupport");
+				TextQueue.putStatus("Not Enough Energy to run LifeSupport");
 			}
 		}
 		
@@ -61,6 +65,8 @@ public class LifeSupport extends Item {
 		base.getItems().addFreeItem(new CookTop(astro,base));
 		base.getItems().addFreeItem(new Rebreather(astro,base));
 		base.getItems().addFreeItem(new WaterTank(astro,base));
+		TextQueue.putMessage("Life Support is charged and ready to save your life...hopefully...");
+		TextQueue.putMessage("The Life Support system is holding together really well...",200);
 		return 0;
 	}
 
