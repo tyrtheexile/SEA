@@ -11,6 +11,7 @@ public class TextQueue implements java.io.Serializable{
     private static ArrayList<Integer> delayTimes = new ArrayList<Integer>();
     private static ArrayList<String> delayStrings = new ArrayList<String>();
 
+    private static int dullnessCounter =0;
 
     public static void nextMessage(int turn){
         String str="\nLog Entry [";
@@ -22,7 +23,17 @@ public class TextQueue implements java.io.Serializable{
 
         if (messageQueue.isEmpty()||messageQueue.get(0)==null)
         {
-            str=str+getNoActivityMessage();
+            Random rand = new Random();
+            dullnessCounter++;
+            if (dullnessCounter>rand.nextInt(150))
+            {
+                dullnessCounter=0;
+                str = str + getNoActivityMessage();
+                str = str + "\n------End Log-----";
+            } else
+            {
+                str="";
+            }
         }else {
             str = str + messageQueue.get(0);
             messageQueue.remove(0);
@@ -31,8 +42,9 @@ public class TextQueue implements java.io.Serializable{
                 str = str + "\n-" + statusQueue.get(0);
                 statusQueue.remove(0);
             }
+            str = str + "\n------End Log-----";
         }
-        str = str + "\n------End Log-----";
+
         Global.sendTextBlock(str);
 
         //Decrement timers in delayTimes
@@ -100,6 +112,7 @@ public class TextQueue implements java.io.Serializable{
         putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
         putMessage("Delay Test4",4);
         putMessage("Delay Test6",12);
+
     }
 
 }
