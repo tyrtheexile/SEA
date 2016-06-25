@@ -10,14 +10,13 @@
         android:id="@+id/button1"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="10dp"
         style="@android:style/Theme.Holo"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="32dp"
         android:id="@+id/desc1"
         android:editable="false"
         android:clickable="false"
@@ -30,8 +29,13 @@
         android:gravity="right"
         android:textAlignment="center"
         android:maxLines="1"
-        android:text="----"
-        android:background="@android:color/transparent"/>
+        android:text="-------------"
+        android:background="@android:color/transparent"
+        android:minLines="2"
+        android:layout_margin="4dp"
+        android:lines="2"
+        android:maxHeight="32dp"
+        android:minHeight="23dp" />
 
     <Button
         android:layout_width="fill_parent"
@@ -40,13 +44,12 @@
         android:id="@+id/button2"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="10dp"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="32dp"
         android:id="@+id/desc2"
         android:editable="false"
         android:clickable="false"
@@ -58,10 +61,14 @@
         android:textSize="@dimen/aaa_frag_desc_textsize"
         android:gravity="right"
         android:textAlignment="center"
-        android:minHeight="10dp"
+        android:minHeight="23dp"
         android:maxLines="1"
-        android:text="----"
-        android:background="@android:color/transparent"/>
+        android:text="-------------"
+        android:background="@android:color/transparent"
+        android:layout_margin="4dp"
+        android:lines="2"
+        android:maxHeight="32dp"
+        android:minLines="2" />
 
     <Button
         android:layout_width="fill_parent"
@@ -70,13 +77,12 @@
         android:id="@+id/button3"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="10dp"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="32dp"
         android:id="@+id/desc3"
         android:editable="false"
         android:clickable="false"
@@ -88,10 +94,14 @@
         android:textSize="@dimen/aaa_frag_desc_textsize"
         android:gravity="right"
         android:textAlignment="center"
-        android:minHeight="10dp"
+        android:minHeight="23dp"
         android:maxLines="1"
-        android:text="----"
-        android:background="@android:color/transparent"/>
+        android:text="-------------"
+        android:background="@android:color/transparent"
+        android:layout_margin="4dp"
+        android:lines="2"
+        android:maxHeight="32dp"
+        android:minLines="2" />
 
     <Button
         android:layout_width="fill_parent"
@@ -100,13 +110,12 @@
         android:id="@+id/button4"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="10dp"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="32dp"
         android:id="@+id/desc4"
         android:editable="false"
         android:clickable="false"
@@ -118,10 +127,14 @@
         android:textSize="@dimen/aaa_frag_desc_textsize"
         android:gravity="right"
         android:textAlignment="center"
-        android:minHeight="10dp"
+        android:minHeight="23dp"
         android:maxLines="1"
-        android:text="----"
-        android:background="@android:color/transparent"/>
+        android:text="-------------"
+        android:background="@android:color/transparent"
+        android:layout_margin="4dp"
+        android:lines="2"
+        android:maxHeight="32dp"
+        android:minLines="2" />
 
     <Button
         android:layout_width="fill_parent"
@@ -130,13 +143,12 @@
         android:id="@+id/button5"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="10dp"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="32dp"
         android:id="@+id/desc5"
         android:editable="false"
         android:clickable="false"
@@ -148,10 +160,14 @@
         android:textSize="@dimen/aaa_frag_desc_textsize"
         android:gravity="right"
         android:textAlignment="center"
-        android:minHeight="10dp"
+        android:minHeight="23dp"
         android:maxLines="1"
-        android:text="----"
-        android:background="@android:color/transparent"/>
+        android:text="-------------"
+        android:background="@android:color/transparent"
+        android:layout_margin="4dp"
+        android:lines="2"
+        android:maxHeight="32dp"
+        android:minLines="2" />
 
     <Button
         android:layout_width="fill_parent"
@@ -160,13 +176,12 @@
         android:id="@+id/button6"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_margin="10dp"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="32dp"
         android:id="@+id/desc6"
         android:editable="false"
         android:clickable="false"
@@ -178,10 +193,14 @@
         android:textSize="@dimen/aaa_frag_desc_textsize"
         android:gravity="right"
         android:textAlignment="center"
-        android:minHeight="10dp"
+        android:minHeight="23dp"
         android:maxLines="1"
-        android:text="----"
-        android:background="@android:color/transparent"/>
+        android:text="-------------"
+        android:background="@android:color/transparent"
+        android:layout_margin="4dp"
+        android:lines="2"
+        android:maxHeight="32dp"
+        android:minLines="2" />
 
     <Button
         android:layout_width="wrap_content"
