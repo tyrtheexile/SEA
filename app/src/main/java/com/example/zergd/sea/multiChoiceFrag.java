@@ -75,6 +75,8 @@ public class multiChoiceFrag extends Fragment {
             TextView but4Desc = (TextView) view.findViewById(R.id.desc4);
             TextView but5Desc = (TextView) view.findViewById(R.id.desc5);
             TextView but6Desc = (TextView) view.findViewById(R.id.desc6);
+            Global.log("\n\n==========================================");
+            Global.log(butDesc1);
             but1Desc.setText(butDesc1);
             but2Desc.setText(butDesc2);
             but3Desc.setText(butDesc3);

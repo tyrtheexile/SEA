@@ -5,8 +5,10 @@ import java.util.Random;
 
 public class TextQueue implements java.io.Serializable{
 
-    private static ArrayList<String> messageQueue = new ArrayList<String>(1000);
+    private static ArrayList<String> messageQueue = new ArrayList<String>();
     private static ArrayList<String> statusQueue = new ArrayList<String>();
+
+
 
     public static void nextMessage(int turn){
         String str="\nLog Entry [";
@@ -55,10 +57,11 @@ public class TextQueue implements java.io.Serializable{
     {
         Random rand = new Random();
         String str="";
-        int x = rand.nextInt();
-        x = (x*100)%6;
+        int x = rand.nextInt(6);
         Global.log("X: ===== "+x);
         switch (x) {
+            case 0: str = "The entire station creaks...";
+                break;
             case 1: str = "The clicks and pops of the station hum ominously in the distance....";
                 break;
             case 2: str = "There is a loud beeping noise somewhere far down the hall...";
@@ -76,10 +79,6 @@ public class TextQueue implements java.io.Serializable{
     }
 
     public static void startGameMessages(){
-        for (int i=0;i<1000;i++)
-        {
-            messageQueue.add(i,null);
-        }
         putMessage("Testing 1");
         putMessage("Testing 2");
         putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
