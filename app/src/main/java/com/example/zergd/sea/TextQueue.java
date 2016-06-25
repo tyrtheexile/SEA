@@ -32,7 +32,9 @@ public class TextQueue implements java.io.Serializable{
                 str = str + "\n------End Log-----";
             } else
             {
-                str="";
+                for (int j=0;j<rand.nextInt(10);j++){
+                    str = ".";
+                }
             }
         }else {
             str = str + messageQueue.get(0);
