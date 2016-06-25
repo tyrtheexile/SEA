@@ -3,6 +3,7 @@ package com.example.zergd.sea.Items;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class CarbonWash extends MultiItem {
 
@@ -34,6 +35,7 @@ public class CarbonWash extends MultiItem {
 	@Override
 	public int cycleMulti() {
 		Global.DebugMSG(2, numberOfThisItem+" Carbon Washes gather "+numberOfThisItem +" Carbon");
+		TextQueue.putStatus(numberOfThisItem+" Carbon Washes gather "+numberOfThisItem +" Carbon");
 		base.setCarbon(base.getCarbon()+numberOfThisItem);
 		return 0;
 	}

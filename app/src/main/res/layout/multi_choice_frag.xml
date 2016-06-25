@@ -5,7 +5,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="-----------"
         android:id="@+id/button1"
         android:layout_marginLeft="20dp"
@@ -15,9 +15,27 @@
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/desc1"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_desc_textsize"
+        android:gravity="right"
+        android:textAlignment="center"
+        android:minHeight="10dp"
+        android:maxLines="1"
+        android:text="----" />
+
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="-----------"
         android:id="@+id/button2"
         android:layout_marginLeft="20dp"
@@ -26,9 +44,27 @@
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/desc2"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_desc_textsize"
+        android:gravity="right"
+        android:textAlignment="center"
+        android:minHeight="10dp"
+        android:maxLines="1"
+        android:text="----" />
+
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="-----------"
         android:id="@+id/button3"
         android:layout_marginLeft="20dp"
@@ -37,9 +73,27 @@
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/desc3"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_desc_textsize"
+        android:gravity="right"
+        android:textAlignment="center"
+        android:minHeight="10dp"
+        android:maxLines="1"
+        android:text="----" />
+
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="-----------"
         android:id="@+id/button4"
         android:layout_marginLeft="20dp"
@@ -48,9 +102,27 @@
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/desc4"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_desc_textsize"
+        android:gravity="right"
+        android:textAlignment="center"
+        android:minHeight="10dp"
+        android:maxLines="1"
+        android:text="----" />
+
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="-----------"
         android:id="@+id/button5"
         android:layout_marginLeft="20dp"
@@ -59,9 +131,27 @@
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/desc5"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_desc_textsize"
+        android:gravity="right"
+        android:textAlignment="center"
+        android:minHeight="10dp"
+        android:maxLines="1"
+        android:text="----" />
+
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="-----------"
         android:id="@+id/button6"
         android:layout_marginLeft="20dp"
@@ -69,6 +159,24 @@
         android:layout_margin="10dp"
         android:background="@color/SpaceButtonColor"
         android:textColor="@color/SpaceButtonText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/desc6"
+        android:editable="false"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textIsSelectable="false"
+        android:textColor="@color/SpaceTextColor"
+        android:textSize="@dimen/aaa_frag_desc_textsize"
+        android:gravity="right"
+        android:textAlignment="center"
+        android:minHeight="10dp"
+        android:maxLines="1"
+        android:text="----" />
 
     <Button
         android:layout_width="wrap_content"

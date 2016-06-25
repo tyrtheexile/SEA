@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class multiChoiceFrag extends Fragment {
 
@@ -56,12 +57,30 @@ public class multiChoiceFrag extends Fragment {
             Boolean butOff4 = bundle.getBoolean("butOff4");
             Boolean butOff5 = bundle.getBoolean("butOff5");
             Boolean butOff6 = bundle.getBoolean("butOff6");
+            String butDesc1 = bundle.getString("butDesc1");
+            String butDesc2 = bundle.getString("butDesc2");
+            String butDesc3 = bundle.getString("butDesc3");
+            String butDesc4 = bundle.getString("butDesc4");
+            String butDesc5 = bundle.getString("butDesc5");
+            String butDesc6 = bundle.getString("butDesc6");
             but1b = (Button) view.findViewById(R.id.button1);
             but2b = (Button) view.findViewById(R.id.button2);
             but3b = (Button) view.findViewById(R.id.button3);
             but4b = (Button) view.findViewById(R.id.button4);
             but5b = (Button) view.findViewById(R.id.button5);
             but6b = (Button) view.findViewById(R.id.button6);
+            TextView but1Desc = (TextView) view.findViewById(R.id.desc1);
+            TextView but2Desc = (TextView) view.findViewById(R.id.desc2);
+            TextView but3Desc = (TextView) view.findViewById(R.id.desc3);
+            TextView but4Desc = (TextView) view.findViewById(R.id.desc4);
+            TextView but5Desc = (TextView) view.findViewById(R.id.desc5);
+            TextView but6Desc = (TextView) view.findViewById(R.id.desc6);
+            but1Desc.setText(butDesc1);
+            but2Desc.setText(butDesc2);
+            but3Desc.setText(butDesc3);
+            but4Desc.setText(butDesc4);
+            but5Desc.setText(butDesc5);
+            but6Desc.setText(butDesc6);
             but1b.setAlpha(.85f);
             but2b.setAlpha(.85f);
             but3b.setAlpha(.85f);

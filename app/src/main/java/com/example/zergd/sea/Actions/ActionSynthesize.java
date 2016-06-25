@@ -80,6 +80,7 @@ public class ActionSynthesize extends Action {
 		{
             Global.log("butOff"+counter+"  "+base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
             bund.putBoolean("butOff"+counter,base.validateCost(i.getAlloyCost(),i.getCarbonCost(),i.getHydrogenCost(),i.getEnergyCost()));
+			bund.putString("desc"+counter,i.getDescription());
             bund.putString("but"+counter,(counter++)+". "+i.getName()+" ("+i.getAlloyCost()+","+i.getCarbonCost()+","+i.getHydrogenCost()+")");
 			if (counter>6) break;
 		}
@@ -87,6 +88,7 @@ public class ActionSynthesize extends Action {
 		{
 			bund.putString("but"+i,"-------");
             bund.putBoolean("butOff"+counter,false);
+			bund.putString("desc"+counter,"------");
             //Global.log("butOff"+i + "false");
 		}
 

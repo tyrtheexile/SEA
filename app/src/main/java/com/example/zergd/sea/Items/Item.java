@@ -15,7 +15,7 @@ public abstract class Item implements java.io.Serializable{
 	protected Astronaut astro;
 	protected MainBase base;
 	protected Boolean owned=false;
-	private String description;
+	private String description="--";
 	protected int numberOfThisItem;
 	protected String color;
 	

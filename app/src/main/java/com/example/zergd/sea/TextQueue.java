@@ -9,14 +9,14 @@ public class TextQueue implements java.io.Serializable{
     private static ArrayList<String> statusQueue = new ArrayList<String>();
 
     public static void nextMessage(int turn){
-        String str="\nLog Entry: ";
+        String str="\nLog Entry [";
         if (turn<3000)
             str=str+"A2-";
         else
             str=str+"Y7-";
-        str=str+""+turn%100+"]- ";
+        str=str+""+turn%100+"] : ";
 
-        if (messageQueue.isEmpty())
+        if (messageQueue.isEmpty()||messageQueue.get(0)==null)
         {
             str=str+getNoActivityMessage();
         }else {
@@ -77,7 +77,7 @@ public class TextQueue implements java.io.Serializable{
     public static void startGameMessages(){
         putMessage("Testing 1");
         putMessage("Testing 2");
-        putMessage("testing 3");
+        putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
     }
 
 }
