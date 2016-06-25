@@ -97,11 +97,11 @@ public class TextQueue implements java.io.Serializable{
                 break;
             case 2: str = "There is a loud beeping noise somewhere far down the hall...";
                 break;
-            case 3: str = "You feel the gravity field temporarily shut down...Power must be fluctuating";
+            case 3: str = "I felt the gravity field temporarily shut down...Power must be fluctuating";
                 break;
             case 4: str = "The hall door is still slightly open, the switch doesn't seem to work...";
                 break;
-            case 5: str = "The synthesizer's light is glowing blue...you have no idea what that means..";
+            case 5: str = "The synthesizer's light is glowing blue...I have no idea what that means..... Okay it's green again!";
                 break;
             case 6: str = "Everything is peacefully quiet for now..";
                 break;
@@ -111,13 +111,19 @@ public class TextQueue implements java.io.Serializable{
 
     public static void startGameMessages(){
         putMessage("Well it feels like we just docked with the station. Whoever was on the stick sure did a rough job of it...damn near knocked me out of my bunk.");
-        putMessage("Wow! Someone should really turn off those Approach Alarms otherwise we are never going back to sleep.");
+        putMessage("Wow! Someone should really turn off those Approach Alarms otherwise I am never going back to sleep.");
         putMessage(".............");
         putMessage("......");
         putMessage("Finally, took them long enough. We should go back to bed, plenty of work to do in a few hours...");
-        putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies",8);
-        putMessage("Delay Test4",4);
-        putMessage("Delay Test6",12);
+        putMessage("The ship looks to be pretty empty...We aren't at one of those fun ports are we? I thought this was some asteroid mining thing.");
+        putMessage("This is getting weird there is no one around, and look the main computer seems to be offline.");
+        putMessage("Odd, even the basic life support is offline, we should probably get that fixed ASAP.");
+        putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
+        putMessage("At least we won't run out of air all that often now, although we should refill those tanks when we can...",11);
+        putMessage("Most of the ship seems completely disabled, it's like someone just pulled the power cord and is letting it slowly fade away.",15);
+        putMessage("I've never really been great with this computer, and it is in some weird 'Power Saving' Mode that I can't figure out",20);
+        putMessage("Okay I think I got the basics of the computer, there doesn't appear any logs or files showing where everyone went...They just vanished",28);
+        putMessage("Vanishing people is not a good way to start my day, but for now I need to focus on staying alive there are a ton of things onboard that need be repaired or replaced",29);
 
     }
 
