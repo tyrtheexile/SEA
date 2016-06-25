@@ -3,13 +3,14 @@ package com.example.zergd.sea.Items;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class Generator extends Item {
 
 	public Generator(Astronaut astro, MainBase base) {
 		super(astro, base);
-		setName("Generator");
-		setDescription("Generates power for the station, allows power to flow to buildings");
+		setName("Generator Harness");
+		setDescription("Generates a bit of power for the station, and allows power to flow to buildings");
 		setAlloyCost(1000);
 		setHydrogenCost(300);
 		setCarbonCost(500);
@@ -17,7 +18,7 @@ public class Generator extends Item {
 
 	@Override
 	public int cycleModifier() {
-		Global.DebugMSG(2, "Generator makes 50 Energy");
+		TextQueue.putStatus("Generator makes 50 Energy");
 		base.setEnergy(base.getEnergy()+50);
 		return 0;
 	}

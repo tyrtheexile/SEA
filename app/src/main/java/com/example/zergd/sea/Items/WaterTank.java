@@ -9,6 +9,7 @@ public class WaterTank extends Item {
 	public WaterTank(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Water Tank");
+		setDescription("It's a big cistern, it should store a good amount more water than before.");
 		setAlloyCost(50);
 		setHydrogenCost(10);
 	}

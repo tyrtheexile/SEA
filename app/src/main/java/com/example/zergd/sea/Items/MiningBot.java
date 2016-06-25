@@ -5,6 +5,7 @@ import java.util.Random;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class MiningBot extends Item {
 
@@ -39,9 +40,9 @@ public class MiningBot extends Item {
 			x = ran.nextInt((10 - 1) + 1) + 1;
 			base.setAlloy(base.getAlloy()+x);
 			str=str+x+" Alloy!";
-			Global.TextDisp(str);
+			TextQueue.putStatus(str);
 		}else
-			Global.TextDisp("Not Enough Energy to run Mining Bot");
+			TextQueue.putStatus("Not Enough Energy to run Mining Bot");
 		return 0;
 	}
 

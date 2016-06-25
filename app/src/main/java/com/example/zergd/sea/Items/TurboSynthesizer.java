@@ -9,7 +9,7 @@ public class TurboSynthesizer extends Item {
 	public TurboSynthesizer(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Turbo Synthesizer");
-		setDescription("Set Synthesizer time in half");
+		setDescription("The Syntesizer takes forever to build stuff, maybe you could Amp it up!");
 		setAlloyCost(300);
 		setCarbonCost(100);
 		setHydrogenCost(100);

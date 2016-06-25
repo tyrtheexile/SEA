@@ -8,7 +8,7 @@ public class Fabricator extends Item {
 	public Fabricator(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Fabricator");
-		setDescription("Allows Construction of Bases");
+		setDescription("Allows Construction of Base Structures...NOT IMPLEMENTED IN ANDROID YET");
 		setAlloyCost(5000);
 		setCarbonCost(2000);
 		setHydrogenCost(2500);

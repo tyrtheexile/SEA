@@ -33,7 +33,7 @@ public class TextQueue implements java.io.Serializable{
             } else
             {
                 for (int j=0;j<rand.nextInt(10);j++){
-                    str = ".";
+                    str = str+ "....";
                 }
             }
         }else {
@@ -110,8 +110,11 @@ public class TextQueue implements java.io.Serializable{
 
     public static void startGameMessages(){
         putMessage("Well it feels like we just docked with the station. Whoever was on the stick sure did a rough job of it...damn near knocked me out of my bunk.");
-        putMessage("Testing 2");
-        putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
+        putMessage("Wow! Someone should really turn off those Approach Alarms otherwise we are never going back to sleep.");
+        putMessage(".............");
+        putMessage("......");
+        putMessage("Finally, took them long enough. We should go back to bed, plenty of work to do in a few hours...");
+        putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies",8);
         putMessage("Delay Test4",4);
         putMessage("Delay Test6",12);
 

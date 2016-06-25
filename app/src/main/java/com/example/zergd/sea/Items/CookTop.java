@@ -3,6 +3,7 @@ package com.example.zergd.sea.Items;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class CookTop extends Item {
 
@@ -11,7 +12,8 @@ public class CookTop extends Item {
 		setAlloyCost(50);
 		setCarbonCost(20);
 		setHydrogenCost(10);
-		setName("CookTop");
+		setName("Food Reclaimer");
+		setDescription("Standard issue Food Reclaimer, it will keep you alive in a pinch. Seems to use a lot of Power.");
 	}
 
 	@Override
@@ -19,10 +21,12 @@ public class CookTop extends Item {
 		if (base.payCost(0, 0, 0, 1))
 		{
 			Global.TextDisp("Cooktop takes 1 energy to make 2 Food");
+			TextQueue.putStatus("Cooktop takes 1 energy to make 2 Food");
 			astro.setFood(astro.getFood()+2);
 		}
 		else
-			Global.TextDisp("Can't Afford to Cooktop this turn");
+			TextQueue.putStatus("Can't Afford to Cooktop this turn");
+
 		return 0;
 	}
 

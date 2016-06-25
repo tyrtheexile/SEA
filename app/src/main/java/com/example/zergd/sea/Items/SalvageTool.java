@@ -3,6 +3,7 @@ package com.example.zergd.sea.Items;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class SalvageTool extends Item {
 
@@ -20,10 +21,10 @@ public class SalvageTool extends Item {
 		{
 			base.setCarbon(base.getCarbon()+2);
 			base.setHydrogen(base.getHydrogen()+2);
-			Global.DebugMSG(2, "Salavage Tool Turns 20 Alloy into 2 Carbon and 2 Hydrogen");
+			TextQueue.putStatus("Salavage Tool Turns 20 Alloy into 2 Carbon and 2 Hydrogen");
 		}
 		else
-			Global.DebugMSG(2,"Can't Afford to salvage this Turn");
+			TextQueue.putStatus("Can't Afford to salvage this Turn");
 		return 0;
 	}
 

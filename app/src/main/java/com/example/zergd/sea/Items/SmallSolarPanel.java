@@ -3,13 +3,14 @@ package com.example.zergd.sea.Items;
 import com.example.zergd.sea.Astronaut.Astronaut;
 import com.example.zergd.sea.Building.MainBase;
 import com.example.zergd.sea.Global;
+import com.example.zergd.sea.TextQueue;
 
 public class SmallSolarPanel extends MultiItem {
 
 	public SmallSolarPanel(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Small Solar Panel");
-		setDescription("Gathers 1 Energy a Turn");
+		setDescription("Gathers a little bit of energy every turn.");
 		setAlloyCost(15);
 	}
 
@@ -20,7 +21,7 @@ public class SmallSolarPanel extends MultiItem {
 
 	@Override
 	public int cycleMulti() {
-		Global.TextDisp(numberOfThisItem+" Small Solar Panels gather "+numberOfThisItem+" Energy");
+		TextQueue.putStatus(numberOfThisItem+" Small Solar Panels gather "+numberOfThisItem+" Energy");
 		base.setEnergy(base.getEnergy()+numberOfThisItem);
 		return 0;
 	}

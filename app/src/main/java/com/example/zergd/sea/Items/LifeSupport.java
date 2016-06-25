@@ -14,7 +14,7 @@ public class LifeSupport extends Item {
 	public LifeSupport(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Life Support");
-		setDescription("Keeps your resources up when charged.lllllllllllllllllllllllllllllllllllllll");
+		setDescription("When fully charged this refill your vital resources if they get to low.");
 		setAlloyCost(30);
 		setCarbonCost(10);
 		setHydrogenCost(10);

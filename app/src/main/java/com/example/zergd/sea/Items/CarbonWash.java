@@ -10,7 +10,7 @@ public class CarbonWash extends MultiItem {
 	public CarbonWash(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Carbon Wash");
-		setDescription("Slowly gathers Carbon during the automated Station cleaning");
+		setDescription("Slowly gathers Carbon during the automated Station cleaning. It's not much but it's practically free.");
 		setAlloyCost(150);
 	}
 

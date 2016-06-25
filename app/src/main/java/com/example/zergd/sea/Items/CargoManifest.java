@@ -12,7 +12,7 @@ public class CargoManifest extends Item {
 	public CargoManifest(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Cargo Manifest");
-		setDescription("Allows you to find what resources are left on the ship");
+		setDescription("Allows you to look through logs to find what resources are left on the ship.");
 		setAlloyCost(5);
 	}
 

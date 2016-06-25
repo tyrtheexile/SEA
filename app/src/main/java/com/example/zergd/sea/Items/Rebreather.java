@@ -11,7 +11,7 @@ public class Rebreather extends Item {
 		super(astro,base);
 		setAlloyCost(20);
 		setName("Rebreather");
-		
+		setDescription("Allows you to breathe air much easier. This could help reduce air usage.");
 	}
 
 	@Override

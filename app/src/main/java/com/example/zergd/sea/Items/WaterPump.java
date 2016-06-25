@@ -9,6 +9,7 @@ public class WaterPump extends Item {
 	public WaterPump(Astronaut astro, MainBase base) {
 		super(astro, base);
 		setName("Water Pump");
+		setDescription("Fixes the Station's water pump, should make getting a glass much quicker.");
 		setAlloyCost(50);
 		setCarbonCost(10);
 	}
