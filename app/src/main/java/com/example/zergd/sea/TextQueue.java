@@ -5,21 +5,20 @@ import java.util.Random;
 
 public class TextQueue implements java.io.Serializable{
 
-    private static ArrayList<String> messageQueue = new ArrayList<String>();
+    private static ArrayList<String> messageQueue = new ArrayList<String>(1000);
     private static ArrayList<String> statusQueue = new ArrayList<String>();
 
     public static void nextMessage(int turn){
-        String str="\nLog[273:";
+        String str="\nLog Entry: ";
         if (turn<3000)
-            str=str+"FR:";
+            str=str+"A2-";
         else
-            str=str+"CL:";
+            str=str+"Y7-";
         str=str+""+turn%100+"]- ";
 
         if (messageQueue.isEmpty())
         {
             str=str+getNoActivityMessage();
-            Global.sendTextBlock(str);
         }else {
             str = str + messageQueue.get(0);
             messageQueue.remove(0);
@@ -28,10 +27,9 @@ public class TextQueue implements java.io.Serializable{
                 str = str + "\n-" + statusQueue.get(0);
                 statusQueue.remove(0);
             }
-            str = str + "\n----------";
-
-            Global.sendTextBlock(str);
         }
+        str = str + "\n------End Log-----";
+        Global.sendTextBlock(str);
     }
 
     public static void putMessage(String str){
