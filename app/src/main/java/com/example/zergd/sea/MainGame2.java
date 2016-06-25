@@ -21,9 +21,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import android.util.*;
 
-// TODO add story narrative
+
 // TODO add base building
-// TODO Add item descriptions below buttons
+
 
 public class MainGame2 extends Activity {
 

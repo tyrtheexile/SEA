@@ -29,6 +29,11 @@ public class TextQueue implements java.io.Serializable{
             {
                 dullnessCounter=0;
                 str = str + getNoActivityMessage();
+                str = str + "\n\n";
+                while (statusQueue.isEmpty() == false) {
+                    str = str + "\n-" + statusQueue.get(0);
+                    statusQueue.remove(0);
+                }
                 str = str + "\n------End Log-----";
             } else
             {
@@ -61,7 +66,9 @@ public class TextQueue implements java.io.Serializable{
                 delayStrings.remove(i);
             }
         }
-
+    while (statusQueue.isEmpty()==false){
+            statusQueue.remove(0);
+        }
     }
 
     public static void putMessage(String str){
