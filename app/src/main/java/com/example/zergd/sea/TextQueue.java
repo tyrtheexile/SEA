@@ -57,6 +57,7 @@ public class TextQueue implements java.io.Serializable{
         String str="";
         int x = rand.nextInt();
         x = (x*100)%6;
+        Global.log("X: ===== "+x);
         switch (x) {
             case 1: str = "The clicks and pops of the station hum ominously in the distance....";
                 break;
@@ -75,6 +76,10 @@ public class TextQueue implements java.io.Serializable{
     }
 
     public static void startGameMessages(){
+        for (int i=0;i<1000;i++)
+        {
+            messageQueue.add(i,null);
+        }
         putMessage("Testing 1");
         putMessage("Testing 2");
         putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
