@@ -98,6 +98,8 @@ public class TextQueue implements java.io.Serializable{
         putMessage("Testing 1");
         putMessage("Testing 2");
         putMessage("It looks the Synthesizer is still functional, albeit barely. You can probably use that to make some basic supplies");
+        putMessage("Delay Test4",4);
+        putMessage("Delay Test6",12);
     }
 
 }
