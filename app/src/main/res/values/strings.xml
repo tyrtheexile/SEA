@@ -7,5 +7,6 @@
         <item>2-Fabricator Start</item>
         <item>3-HighResource</item>
     </string-array>
+    <string name="testName">Test Mode:</string>
 
 </resources>

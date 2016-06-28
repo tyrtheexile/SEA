@@ -36,7 +36,7 @@
         android:layout_alignEnd="@+id/newGame"
         android:spinnerMode="dropdown"
         android:entries="@array/testModes"
-        android:prompt="TestMode"
+        android:prompt="@string/testName"
         android:background="#f58383" />
 
     <TextView
