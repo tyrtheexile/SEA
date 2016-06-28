@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.io.File;
 
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Button startGame = (Button) this.findViewById(R.id.StartGame);
         Button newGame = (Button) this.findViewById(R.id.newGame);
 
+        final Spinner spin = (Spinner) findViewById(R.id.testMode);
+        final TextView time = (TextView) findViewById(R.id.timeInc);
+
         if (new File(getFilesDir()+"/astroOut.bin").exists()) {
             startGame.setText("Continue");
         }else{
@@ -32,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         }
         startGame.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v){
+                if (spin.getSelectedItemPosition()>0 && spin.getSelectedItemPosition()<5)
+                    Global.setTestmode(spin.getSelectedItemPosition());
+                if (time.getText().equals("Turn Time (s)")==false)
+                    Global.setTestmode(Integer.parseInt(time.getText().toString())*1000);
+
                 Intent i = new Intent(MainActivity.this, MainGame2.class);
                 startActivity(i);
             }
@@ -45,5 +55,10 @@ public class MainActivity extends AppCompatActivity {
                }
            }
             );
+
+
+
+
+
     }
 }

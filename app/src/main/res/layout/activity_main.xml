@@ -26,4 +26,29 @@
         android:layout_marginTop="46dp"
         android:layout_below="@+id/StartGame"
         android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/testMode"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/newGame"
+        android:layout_alignEnd="@+id/newGame"
+        android:spinnerMode="dropdown"
+        android:entries="@array/testModes"
+        android:prompt="TestMode"
+        android:background="#f58383" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Turn Time (s)"
+        android:id="@+id/timeInc"
+        android:layout_below="@+id/testMode"
+        android:layout_toStartOf="@+id/StartGame"
+        android:layout_marginTop="42dp"
+        android:layout_alignRight="@+id/newGame"
+        android:layout_alignEnd="@+id/newGame"
+        android:background="#f58383" />
 </RelativeLayout>
